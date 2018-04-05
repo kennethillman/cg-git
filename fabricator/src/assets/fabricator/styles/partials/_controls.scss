@@ -1,0 +1,180 @@
+.f-controls {
+	@include clearfix;
+	@include border-box;
+
+	margin-top:16px;
+
+	.f-control {
+		display: inline-block;
+		float: left;
+		text-align: center;
+
+		margin: 0;
+
+		&:active {
+			background: darken(#00B16A,6%);
+			use {
+				fill: #2b2b2b;
+			}
+		}
+
+		&.f-active {
+			// box-shadow: inset 0 0.25rem 0 0 color(accent);
+			background: #00B16A;
+			box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.324);
+
+			use {
+				fill: #2b2b2b;
+			}
+			&:hover {
+				background: darken(#00B16A,6%);
+			}
+		}
+
+		svg {
+			vertical-align: middle;
+
+			use {
+				fill: #fff;
+			}
+		}
+	}
+}
+
+.f-control {
+	@include border-box;
+	display: inline-block;
+	cursor: pointer;
+	margin-left: 0.66rem;
+
+
+	&:first-child {
+		margin-left: 0;
+	}
+
+	svg {
+		width: 0.875rem;
+		height: 0.875rem;
+
+		use {
+			fill: color(light);
+		}
+	}
+}
+
+.f-control-bar {
+	position: fixed;
+	z-index: 40;
+	width: 2000px;
+	@include clearfix;
+	padding: 10px;
+	overflow: hidden;
+
+	svg {
+		fill: #fff;
+		display: block;
+		float: left;
+		width: 15px;
+		height: 15px;
+	}
+
+
+
+	.f-control-fabricator {
+		float: left;
+		border-radius: 30px;
+		overflow: hidden;
+
+		transition: transform .6s ease-out;
+		transform: translateY(-200%);
+
+		.-f-show-extras &{
+			transition: transform .6s ease-out .15s;
+			transform: translateY(0);
+		}
+
+		.f-control {
+			&:first-child {
+				padding-left:14px;
+			}
+			&:last-child {
+				padding-right:14px;
+			}
+		}
+
+	}
+	
+
+	.f-control {
+		float: left;
+		background:  #2b2b2b;
+		padding: 10px;
+		box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.524);
+		
+		&.f-control-home {
+			margin-right: 10px;
+			border-radius: 50%;
+			transition: transform .6s ease-out;
+			transform: translateY(-200%);
+
+			.-f-show-extras &{
+				transform: translateY(0);
+			}
+		}
+		
+		
+		&:hover {
+			background: #000;
+		}
+		&:active {
+			background: darken(#00B16A,6%);
+			svg {
+				fill: #2b2b2b;
+			}
+		}
+	
+	}
+
+
+	.f-menu-toggle {
+		cursor: pointer;
+		vertical-align: middle;
+		padding: 22px;
+		box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.524);
+		position: relative;
+		margin-right: 10px;
+		border-radius: 50%;
+		overflow: hidden;
+
+		.xmark {
+			position: absolute;
+			top: 73px;
+			left: 22px;
+		}
+
+		&:active {
+			background: darken(#00B16A,6%);
+			use {
+				fill: #2b2b2b;
+			}
+		}
+		
+
+		svg {
+			transition: transform .375s ease-out;
+			width: 26px;
+			height: 26px;
+		}
+
+		.-f-show-menu-overtake & {
+			svg {
+				
+			}
+			
+		}
+
+	}
+
+}
+
+

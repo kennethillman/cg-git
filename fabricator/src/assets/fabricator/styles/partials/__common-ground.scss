@@ -1,0 +1,76 @@
+
+
+.common-ground {
+
+// - - - STARTPAGE - - -
+
+	.f-startpage {
+		.f-container {
+			   background: none;
+		}
+		.f-controls {
+			display: none;
+		}
+		.f-brand-logo {
+		    width: 300px;	 
+		}
+
+	}
+
+
+// - - - CONTROLS - - -
+
+	.f-control-bar {
+		.f-control {
+			background:  $pink;
+			box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.524);
+			
+			&:hover {
+				background: darken( $pink , 9%);
+			}
+			&:active {
+				background: $blue3 ;
+				svg {
+					fill: #fff;
+				}
+			}
+		
+		}
+	}
+
+	.f-controls {
+		.f-control {
+
+
+			&:active {
+				background: darken($blue3,6%);
+				use {
+					fill: #fff
+				}
+			}
+
+			&.f-active {
+				// box-shadow: inset 0 0.25rem 0 0 color(accent);
+				background: $blue3;
+				box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.324);
+
+				use {
+					fill: #fff;
+				}
+				&:hover {
+					background: darken($blue3,9%);
+				}
+			}
+
+			svg {
+
+				use {
+					fill: #fff;
+				}
+			}
+		}
+	}
+
+		
+
+}

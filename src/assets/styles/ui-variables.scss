@@ -1,0 +1,120 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
+// VARIABLES - GLOBAL
+// 
+
+/////////////////////////////////////////////////////////////////////////
+// Table of contents 
+/////////////////////////////////////////////////////////////////////////
+//
+// - Colors
+// - Font 
+// - Speed  
+// - Overlay 
+//
+//
+/////////////////////////////////////////////////////////////////////////
+
+
+
+$ui-colors: (
+	black:			#000000,
+	white:			#ffffff,
+	text:			#323333,
+	grey:			#faf4f1,
+	blue1:			#52bdf9,
+	blue2:			#0f5ff5,
+	blue3:			#2f19ad,
+	bluelight:		#f2fafe,
+	green:			#dffee4,
+	yellow: 		#f8f15d,
+	pink:			#ec405d,
+	pinklight:      #f6d7d8,
+	bluedark:   	#1c3558,
+	visatsport: 	#1c3558,
+	lf: 			#f3f3f3		 
+);
+
+
+/////////////////////////////////////////////////////////////////////////
+// COLORS  
+/////////////////////////////////////////////////////////////////////////
+
+// Solid
+$black:			#000000 !default;
+$white:			#ffffff !default;
+
+$text:			#323333!default;
+$grey:			#faf4f1!default;
+$blue1:			#52bdf9!default;
+$blue2:			#0f5ff5!default;
+$blue3:			#2f19ad!default;
+$bluelight:		#f2fafe!default;
+$green:			#dffee4!default;
+$yellow: 		#f8f15d !default;
+$pink:			#ec405d!default;
+$pinklight:     #f6d7d8!default;
+$bluedark:   	#1c3558!default;
+
+
+// Greys
+$grey1: 		#f7f7f7 !default;
+$grey2: 		#cfcfcf !default;
+$grey3: 		#d8d8d8 !default;
+$grey4: 		#898989 !default;
+
+
+// Special
+$visatsport: 	#1c3558 !default;
+
+
+// Links
+$link:			$text !default;
+$link-hover:	lighten($link,8%);
+$link-focus:	darken($link,8%);
+$link-active:	lighten($link,16%);
+$link-visited:	lighten($link,16%);
+
+
+$button:		$text !default;
+$button-hover:	lighten($button,8%);
+$button-focus:	darken($button,8%);
+$button-active:	lighten($button,16%);
+$button-visited:lighten($button,16%);
+
+/////////////////////////////////////////////////////////////////////////
+// COLORS  
+/////////////////////////////////////////////////////////////////////////
+
+$color-palette: $black $white $grey $blue1 $blue2 $blue3 $green $yellow $pink $link;
+
+
+/////////////////////////////////////////////////////////////////////////
+// FONT
+/////////////////////////////////////////////////////////////////////////
+
+
+$font-a: 'freightbig_probook_italic', serif;
+
+$font-b: 'apercuregular', monospace; 
+
+$font-c: 'apercubold', monospace; 
+
+$font-d: 'freightbig_problack', serif;
+
+$font-e: 'freightbig_probook', serif;
+
+
+// Base font - 1rem
+$vp320-base-rem: 11px;
+$vp768-base-rem: 11px;
+
+
+
+
+
+
+
+
+

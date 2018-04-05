@@ -1,0 +1,35 @@
+---   
+class-preview-layout: g-4
+notes: |
+
+  Clean upp include classes
+
+---
+
+
+<{{#if link}}a href="{{link}}"{{/if}}{{#unless link}}div{{/unless}} class="m-teaser {{class}} {{#if icon}}-icon{{/if}}" {{#if image}} style="background-image:url(/assets/images/{{image}});"{{/if}}>
+
+	{{#unless icon}}
+		{{#if header}}
+			<h3 class="header">{{header}}{{^header}}m-teaser{{/header}}</h3>
+		{{/if}}
+	{{/unless}}
+
+	<div class="body">
+
+		<div class="content">
+			{{#if icon}}
+				<figure>
+		  			<svg><use xlink:href="/assets/images/svg-icons.svg#{{icon}}" /></svg>
+				</figure>
+			{{/if}}
+			{{#if text}}
+				<p class="text">
+					{{text}}
+				</p>
+			{{/if}}
+		</div>
+
+	</div>
+
+</{{#if link}}a{{/if}}{{#unless link}}div{{/unless}}>

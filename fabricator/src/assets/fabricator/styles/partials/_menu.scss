@@ -1,0 +1,203 @@
+
+// - - Menu - Overtake 
+
+.f-menu-overtake {
+
+
+
+	// - Show meny
+	&.-f-show-menu-overtake {
+		overflow: hidden;
+		max-height: 100vh;
+		height: 100vh;
+
+		.f-container {
+			-webkit-filter: blur(5px);
+	    	filter: blur(5px);	
+	    	overflow: hidden;
+			max-height: 100vh;
+			height: 100vh;
+		}
+
+
+		.f-menu-overlay {
+			display: block;
+		}
+		.f-menu-body {
+			display: flex;
+		}
+		.f-menu {
+			display: -webkit-box;
+		    display: -webkit-flex;
+		    display: -ms-flexbox;
+		    display: flex;
+		}
+
+	}
+	
+
+
+	.f-menu {
+		
+		position: absolute;
+		z-index: 3;
+		width: 100%;
+		background: none;
+		display: none;
+
+	    
+	    -webkit-box-align: center;
+	    -webkit-align-items: center;
+	    -ms-flex-align: center;
+	    align-items: center;
+	    -webkit-box-pack: center;
+	    -webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	    justify-content: center;
+
+
+		ul {
+			@include clearfix();
+		}		
+
+		li {
+			@include clearfix();
+			float: left;
+			width: 200px;
+		}
+		ul ul {
+			
+			float:left;
+		}
+		
+	}
+
+	.f-menu-body {
+		background: rgba(0,0,0,.6);
+		max-width: 1200px;
+		display: none;
+
+	}
+
+	.f-menu-divider {
+		width: 100% !important;
+		height: 1px;
+		margin-top: -1px;
+	}
+
+
+
+	.f-menu-overlay {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: rgba(0,0,0,.40);
+		z-index: 2;
+
+
+	}
+
+	.f-container {
+		margin: 0;
+	}
+
+
+
+	// - Inverted
+
+	&.-f-menu-inverted {
+		.f-menu {
+
+		}
+	}
+
+
+} 
+
+
+
+
+
+
+
+
+// - - Menu - Leftside
+
+.f-menu {
+
+	@include border-box;
+	position: fixed;
+	top: 0;
+	left: 0;
+	transform: translate(-$menu-width, 0);
+	width: $menu-width;
+	height: 100%;
+	z-index: 1;
+	background-color: color(menu-background);
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+
+	.f-menu-active & {
+		transform: translate(0, 0);
+	}
+
+	ul {
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-left: 0;
+	}
+
+	> ul {
+		margin-top: 0;
+		margin-bottom: 1rem;
+
+		> li {
+			margin-top: 1rem;
+		}
+	}
+
+	li {
+		list-style-type: none;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	a {
+		display: block;
+		padding: 0.33rem 2rem;
+		color: #fff;
+		text-decoration: none;
+		font-size: 0.875rem;
+		line-height: 1.5;
+
+		&:visited {
+			color: #fff;
+		}
+
+		&:hover {
+			color: #fff;
+			text-decoration: underline;
+		}
+
+		&.f-active {
+			box-shadow: inset 0.25rem 0 0 0 color(accent);
+		}
+	}
+
+	.f-menu__heading {
+		padding-left: 1.5rem;
+		font-weight: 900;
+		font-size: 1.5rem;
+		font-family: 'Oswald', sans-serif;
+
+		color: #fff;
+
+		&:hover {
+			color: color(normal);
+		}
+	}
+}

@@ -1,0 +1,38 @@
+<div class="f-item">
+	<div class="f-gc">
+		<div class="f-item-group" id="{{@key}}">
+
+		{{#if items}}
+			<div class="f-g-12">
+				<div class="f-item-heading-group -if-items">
+					<h2 class="f-item-heading f-h2" data-f-toggle="labels">{{name}} IF HE</h2>
+				</div>
+			</div>
+			{{#each items}}
+				{{#unless data.hide}}
+
+					<div class="{{#if data.layout}}{{{data.layout}}}{{else}}f-g-12{{/if}}">
+						<div class="f-item-group -if-items" id="{{@key}}">
+							<div class="f-item-heading-group" data-f-toggle="labels">
+								<h3 class="f-item-heading f-h3">{{name}}</h3>
+								{{> f-item-controls}}
+							</div>{{> f-item-content this}}
+						</div>			
+					</div>
+
+				{{/unless}}
+			{{/each}}
+		{{else}}
+			{{#unless data.hide}}
+			<div class="f-g-12">
+				<div class="f-item-heading-group" data-f-toggle="labels">
+					<h2 class="f-item-heading f-h2">{{name}} ELSE HE</h2>
+					{{> f-item-controls}}
+				</div>{{> f-item-content this}}
+			</div>
+			{{/unless}}
+		{{/if}}
+
+		</div>
+	</div>
+</div>

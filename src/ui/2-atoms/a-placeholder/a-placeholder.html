@@ -1,0 +1,20 @@
+---   
+notes: |
+
+  Clean upp include classes
+
+---
+
+<div class="c-placeholder {{class}} {{#if icon}}-icon{{/if}}">
+
+	{{#unless icon}}
+		<h3 class="text">{{text}}{{^text}}C-Placeholder{{/text}}</h3>
+	{{/unless}}
+
+	{{#if icon}}
+		<figure>
+  			<svg><use xlink:href="/assets/svg/ui-{{sprite}}-svg-sprite.svg#{{icon}}" /></svg>
+		</figure>
+	{{/if}}
+
+</div>

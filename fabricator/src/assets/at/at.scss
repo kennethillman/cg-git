@@ -1,0 +1,30 @@
+/**
+ * AT - Active Talents styles
+ * @author Kenneth Illman
+ * Class selectors are namespaced with "at-"
+ */
+
+
+// MQ Viewport
+$at-VP320:                                 true;
+$at-VP480:                                 true;
+$at-VP600:                                 true;
+$at-VP768:                                 true;
+$at-VP1024:                                true;
+$at-VP1280:                                true;
+$at-VP1440:                                true;
+$at-VP1680:                                true;
+$at-VP1920:                                true;
+
+// Only ranges
+$at-MOBILE:                                true;
+$at-TABLET:                                true;
+$at-DESKTOP:                               true;
+
+
+@import "./src/assets/styles/ui-variables";
+
+@import 'at-helpers/at-mixins-breakpoints';
+@import 'at-helpers/at-mixins';
+@import 'at-helpers/at-helpers';
+

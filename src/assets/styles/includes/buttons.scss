@@ -1,0 +1,216 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+BUTTONS & LINKS
+*/ 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Table of contents 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// - - Links
+// - - Buttons
+//
+//
+// - - RWD 
+
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+	(i) -> Scoped so only everything inside prefix will inherit
+	(i) -> "$prefix" is inherited from -> src/core/_sass/_variables.scss
+
+	(i) -> Themes -> dark "$theme-dark" &  light "$theme-light" 
+*/ 
+
+
+// [class ^= "#{$prefix}"] {
+
+
+////////////////////////////////////////////////////////////////
+// VP320 - MOBILE AND TOUCH FIRST
+////////////////////////////////////////////////////////////////
+
+@include VP320 {
+
+
+////// BUTTONS
+
+	.btn {
+
+		@include border-radius(4px);
+		border:none; // Needed for input
+		line-height:1;
+		font-size:1em;
+		font-weight:bold;
+		padding:1em 2em;
+		display:inline-block;
+		position:relative;
+		text-decoration:none;
+		display: inline-block;
+
+		background: $link;
+		color: $white;
+		
+		&:hover{
+			color:$white;
+			text-decoration:none;
+			background:darken($link, 8%);
+			cursor: pointer;
+		} 
+
+
+// - - Features
+
+		/* .at-inverted &{
+			background:#fff;
+			color:#2a2a2a;
+			&:hover{
+				background:#eee;
+			} 
+		}
+*/
+
+
+		
+
+
+
+		// Sizes
+		&.-small{
+			padding:12px 30px;
+		}
+
+		&.-large{
+			font-size:15px;
+			padding:18px 40px;
+		}
+
+		&.-rounded-sides {
+			@include border-radius(4rem);
+		}
+
+		&.-ghost {
+			background: none;
+			border: 2px solid $link;
+			color: $link;
+			box-sizing: border-box;
+
+			&:hover {
+				background: $link;
+				color: $white; 
+			}
+		}
+
+
+
+	
+
+		// Disabled
+		&.-disabled, 
+		&:disabled{
+			background:#a4a5a6;
+			border-bottom:4px solid #959595;
+			color:rgba(255,255,255,.8);
+			cursor:default;
+
+			&:hover{
+				background:#a4a5a6;
+				border-bottom:4px solid #959595;
+				color:rgba(255,255,255,.8);
+				cursor:default;
+			}
+
+		}
+
+	    // Touch normalize (Hover + focus, Active, )
+		.touch & {
+			
+			text-decoration:none;
+
+				&:hover,
+				&:focus{
+					text-decoration:none;
+				} 
+
+				&:active{
+					text-decoration:none;
+				} 
+
+		} // .touch END	
+
+	} // .bth-v1 END
+
+
+
+	//&.-inverted,
+	//.-inverted &,
+	 .-inverted {
+		
+		.btn {
+			background:$white;
+			color: $black;
+
+			&.-ghost {
+				background: none;
+				border: 2px solid $white;
+				color: $white;
+			}
+			
+			&:hover{
+				color: $black;
+				background:darken($white, 8%);
+			} 
+
+		}
+		
+	}
+
+
+
+} // VP320 END
+
+
+////////////////////////////////////////////////////////////////
+// MSIE - INTERNET EXPLORER
+////////////////////////////////////////////////////////////////
+
+@include msie {
+
+		.msie-8 &{
+			
+		}
+
+		.msie-9 &{
+			
+		}
+
+} // msie END
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+////// END
+
+
+
+//} // END [class ^= "#{$prefix}"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

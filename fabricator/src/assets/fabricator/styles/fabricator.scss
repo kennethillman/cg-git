@@ -1,0 +1,54 @@
+/**
+ * Fabricator styles
+ * @author Luke Askew
+ * Fabricator style additions and modifications
+ * @author Kenneth Illman
+ * Class selectors are namespaced with "f-"
+ */
+
+$settings: (
+	theme: light,
+	accent: hsl(0, 0%, 46%),
+	menu-width: 14rem
+);
+
+// MQ Viewport
+$f-VP320:                                 true;
+$f-VP480:                                 true;
+$f-VP600:                                 true;
+$f-VP768:                                 true;
+$f-VP1024:                                true;
+$f-VP1280:                                true;
+$f-VP1440:                                true;
+$f-VP1680:                                true;
+$f-VP1920:                                true;
+
+// Only ranges
+$f-MOBILE:                                true;
+$f-TABLET:                                true;
+$f-DESKTOP:                               true;
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+/*
+	font-family: 'Oswald', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+*/
+
+@import './src/assets/styles/ui-variables';
+
+@import 'partials/mixins-breakpoints';
+@import 'partials/mixins';
+@import 'partials/variables';
+@import 'partials/grid';
+@import 'partials/global';
+@import 'partials/typography';
+@import 'partials/code';
+@import 'partials/color-chips';
+@import 'partials/controls';
+@import 'partials/item';
+@import 'partials/layout';
+@import 'partials/menu';
+
+@import 'partials/__common-ground.scss';

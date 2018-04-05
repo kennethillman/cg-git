@@ -1,0 +1,354 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
+// SECTION
+//  
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Table of contents 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// - VP320
+// - VP480
+// - VP768
+// - VP1024
+// - VP1280  
+// - VP1440
+// - VP1700  
+//
+// - - MS Internet explorer
+// - - NO JavaScript
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+//////// CLASS NAME
+$className: o-we;
+
+
+.#{$className}{
+
+////////////////////////////////////////////////////////////////
+// VP320 - MOBILE AND TOUCH FIRST
+////////////////////////////////////////////////////////////////
+
+
+@include VP320 {
+
+
+// - - General
+		min-height: 100vh;
+		position: relative;
+		padding: 1.5rem 0;
+		
+		.body {
+			position: relative;
+			z-index: 1;
+		}
+
+		.label {
+			text-align: center;
+			font-family: $font-a;
+			font-size: 32px;
+			line-height: 1;
+			margin-bottom:3rem;
+		}
+
+		.body {
+			width: 100%;
+		}
+
+		figure {
+			@include border-radius(50%);
+			background-color: #f2fafe;
+			height:auto;
+			@include aspect-ratio-img(1,1);
+			width: 64%;
+    		margin: 0 auto 1.5rem;
+    		max-width: 280px;
+		}
+
+		svg {
+			width: 100%;
+			height: 100%!important;
+			fill: $blue3;
+		}
+
+		a {
+			display: inline-block; 
+			margin: 0 1.5em 1em 0;
+			color: $text;
+		}
+
+		.name {
+			font-family: $font-d;
+			font-size: 20px;
+			line-height: 28px;	
+		}
+
+		.person {
+			padding: 2rem 1rem;
+		}
+
+		.text-wrapper {
+			text-align: center;
+			
+			p {
+				font-size: 20px;
+				line-height: 28px;
+				
+
+			}
+		}
+
+
+// - - Interaction (States)
+
+/*
+			.touch &{
+			    &:active{
+
+			    }
+			}
+
+			.no-touch &{
+			    &:hover{
+
+			    }
+			    &:active{
+
+			    }
+			}
+
+			&:focus{
+
+			}
+*/
+
+
+
+} // VP320 END
+
+
+
+////////////////////////////////////////////////////////////////
+// VP480
+////////////////////////////////////////////////////////////////
+
+@include VP480 {
+	
+	.person {
+		.g-3.g-push-1{
+			width: auto;
+			float: none;
+		}
+	}
+
+
+} // VP480 END
+
+
+////////////////////////////////////////////////////////////////
+// VP768
+////////////////////////////////////////////////////////////////
+
+@include VP768 {
+
+	figure {
+		width: 100%;
+		margin: 0;
+		max-width: none;
+	}
+
+	.text-wrapper {
+		width: 66.66667%;
+		
+		text-align:  left;
+		p {		
+	
+			margin: 0 0 1em 3rem;
+		}
+	}
+
+	.person {
+
+ 		display: -webkit-box;
+	    display: -webkit-flex;
+	    display: flex;
+	    -webkit-box-align: center;
+	    -webkit-align-items: center;
+	    align-items: center;
+	    min-height: 24em;
+	    -webkit-box-pack: center;
+	    -webkit-justify-content: center;
+	    justify-content: center;
+
+		.g-3.g-push-1{
+			width: 30%;
+			float: left;
+			margin-left:4%; 
+		}
+
+	}
+
+
+
+	.name {
+		margin: 0 0 1em 3rem;
+		max-width: 44vw;
+	}
+
+	a {
+		display: inline-block; 
+		margin:0 1.5em 0 0;
+		color: $text;
+	}
+
+	.links {
+		margin: 0 0 0 3rem;
+	}
+
+
+	.row-reverse-768    { 
+		-webkit-flex-direction: row-reverse; 
+		flex-direction: row-reverse;
+
+		.text-wrapper {
+		 	text-align: right;
+		}
+
+		.name {
+			margin: 0 0 1em 3rem;
+			max-width: none;
+		}
+
+		.links {
+			margin: 0 0 0 3rem;
+		}
+
+		a {
+			margin: 0 0 0 1.5em;
+		}
+
+	} 
+	
+
+} // VP768 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1024
+////////////////////////////////////////////////////////////////
+
+@include VP1024{
+	
+	.person {
+	
+    	 
+		
+		.g-3.g-push-1{
+			width: 25%;
+			margin-left: 8.33333%;
+		}
+		.text-wrapper {
+    		  
+		}
+
+
+	}
+
+	.text-wrapper {
+		width: 50%;
+		p {		
+			max-width: 44vw;
+		}
+	}
+	
+		
+} // VP1024 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1280 
+////////////////////////////////////////////////////////////////
+
+@include VP1280 {
+	
+
+	
+} // VP1280 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1680
+////////////////////////////////////////////////////////////////
+
+@include VP1680 {
+	
+	
+
+	
+} // VP1680 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1680
+////////////////////////////////////////////////////////////////
+
+@include VP1920 {
+	
+	
+
+	
+} // VP1920 END
+
+
+////////////////////////////////////////////////////////////////
+// MSIE - INTERNET EXPLORER
+////////////////////////////////////////////////////////////////
+
+@include msie {
+		
+	.ie-8 &{
+		
+	}
+
+	.msie-9 &{
+		
+	}
+
+} // msie END
+
+
+////////////////////////////////////////////////////////////////
+// NO-JAVASCRIPT
+////////////////////////////////////////////////////////////////
+
+@include no-js {
+	
+	.no-js &{
+		
+	}
+
+} // no-js END
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+////// END
+
+} // END
+
+
+
+
+
+
+
+
+
+
+
+
+
+

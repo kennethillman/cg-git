@@ -1,0 +1,60 @@
+
+//
+// FONT IMPORT
+//
+
+////////////////////////////////////////////////////////////////
+// VP320
+////////////////////////////////////////////////////////////////
+
+@include VP320 {
+
+	// Fonts
+
+	@font-face {
+	    font-family: 'apercuregular';
+	    src: url('/assets/fonts/apercu_regular_0-webfont.woff2') format('woff2'),
+	         url('/assets/fonts/apercu_regular_0-webfont.woff') format('font-woff'),
+	         url('/assets/fonts/apercu_regular_0-webfont.ttf') format('truetype');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+
+	@font-face {
+	    font-family: 'apercubold';
+	    src: url('/assets/fonts/apercu_bold-webfont.woff2') format('woff2'),
+	         url('/assets/fonts/apercu_bold-webfont.woff') format('font-woff'),
+	         url('/assets/fonts/apercu_bold-webfont.ttf') format('truetype');
+	    font-weight: bold;
+	    font-style: normal;
+
+	}
+
+	@font-face {
+	    font-family: 'freightbig_probook_italic';
+	    src: url('/assets/fonts/freightbigprobookitalic-webfont.woff2') format('woff2'),
+	         url('/assets/fonts/freightbigprobookitalic-webfont.woff') format('font-woff'),
+	         url('/assets/fonts/freightbigprobookitalic-webfont.ttf') format('truetype');
+	    font-weight: italic;
+	    font-style: normal;
+	}
+
+	@font-face {
+	    font-family: 'freightbig_problack';
+	    src: url('/assets/fonts/freightbigproblack-webfont.woff2') format('woff2'),
+	         url('/assets/fonts/freightbigproblack-webfont.woff') format('font-woff'),
+	         url('/assets/fonts/freightbigproblack-webfont.ttf') format('truetype');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+
+	@font-face {
+	    font-family: 'freightbig_probook';
+	    src: url('/assets/fonts/freighttextprobook-webfont.woff2') format('woff2'),
+	         url('/assets/fonts/freighttextprobook-webfont.woff') format('font-woff'),
+	         url('/assets/fonts/freighttextprobook-webfont.ttf') format('truetype');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+
+}

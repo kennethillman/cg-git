@@ -1,0 +1,78 @@
+//
+// LINKS
+//
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Table of contents
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// - VP320
+// - VP480
+// - VP600
+// - VP768
+// - VP1024
+// - VP1280
+// - VP1440
+// - VP1680
+// - VP1920
+//
+// - - MS Internet explorer
+// - - NO JavaScript
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+	@include VP320 {
+
+		a {
+			color: $link;
+
+			&:visited {
+				color: $link;
+			}
+			&:hover,
+			&:focus,
+			&:active {
+				color: $link-hover;
+			}
+			&:focus {
+				outline: thin dotted;
+			}
+			&:hover,
+			&:active {
+				outline: 0;
+			}
+
+
+			.-inverted & {
+
+				color: $white;
+
+				&:visited {
+					color: $white;
+				}
+				&:hover,
+				&:focus,
+				&:active {
+					color: darken($white, 12%);
+				}
+
+			}
+
+
+		.-inverted & {
+
+		}
+
+
+
+		}
+
+
+
+
+	} // VP320 END
+
+
+

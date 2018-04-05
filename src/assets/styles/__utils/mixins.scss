@@ -1,0 +1,350 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
+// MIXINS
+// 
+
+/////////////////////////////////////////////////////////////////////////
+// Table of contents 
+/////////////////////////////////////////////////////////////////////////
+//
+//
+// - - ASPECT-RATIO-IMG
+// - - BORDER RADIUS
+// - - GRADIENT
+// - - TRANSITION
+// - - BOX SHADOW
+// - - ROTATE
+// - - BOX SIZING
+// - - CLEARFIX
+// - - PLACEHOLDER TEXT
+//
+// 
+/////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////
+// TRANISTION
+// -> @include transitionTwo(height 0.3 ease 0.3s, width 0.3 ease 0.3s);
+/////////////////////////////////////////////////////////////////////////
+
+@mixin transition($a){
+    -webkit-transition: $a;  
+     -ms-transition: $a;  
+     transition: $a; 
+}
+
+@mixin transitionTwo($a,$b){
+    -webkit-transition: $a,$b;  
+     -ms-transition: $a,$b;  
+     transition: $a,$b; 
+}
+
+@mixin transitionThree($a,$b,$c){
+    -webkit-transition: $a,$b,$c;  
+     -ms-transition: $a,$b,$c;  
+     transition: $a,$b,$c; 
+}
+
+/////////////////////////////////////////////////////////////////////////
+// TRANISTION
+// -> @include skew(25,10);
+// -> @include transform-origin(top left);
+// -> @include transform(rotate(90deg));
+// -> @include transform(translate(10%, -2px));
+/////////////////////////////////////////////////////////////////////////
+
+
+// Generic transform
+
+@mixin transform($t) {
+     -moz-transform: $t;
+       -o-transform: $t;
+      -ms-transform: $t;
+  -webkit-transform: $t;
+          transform: $t;
+}
+
+@mixin transformTwo($t1,$t2) {
+     -moz-transform: $t1 $t2;
+       -o-transform: $t1 $t2;
+      -ms-transform: $t1 $t2;
+  -webkit-transform: $t1 $t2;
+          transform: $t1 $t2;
+}
+
+@mixin transformThree($t1,$t2,$t3) {
+     -moz-transform: $t1 $t2 $t3;
+       -o-transform: $t1 $t2 $t3;
+      -ms-transform: $t1 $t2 $t3;
+  -webkit-transform: $t1 $t2 $t3;
+          transform: $t1 $t2 $t3;
+}
+
+// Rotate
+
+@mixin rotate($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+ 
+
+// Scale
+
+@mixin scale($scale) {
+   @include transform(scale($scale));
+} 
+
+
+// Translate
+
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+
+
+// Skew
+
+@mixin skew ($x, $y) {
+   @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+
+// Transform origin
+
+@mixin transform-origin ($origin) {
+     -moz-transform-origin: $origin;
+       -o-transform-origin: $origin;
+      -ms-transform-origin: $origin;
+  -webkit-transform-origin: $origin;
+          transform-origin: $origin;
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+// ASPECT-RATIO-IMG
+// -> @include aspect-ratio-img(16,9)
+/////////////////////////////////////////////////////////////////////////
+
+@mixin aspect-ratio-img($width, $height) {
+    position: relative;
+    overflow:hidden;
+    display:block;
+    
+    &:before{
+        display: block;
+        content: " ";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+
+    > img,
+    > svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height:auto;
+        width: 100%;
+    }
+
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////
+// BORDER RADIUS
+// -> @include border-radius(4px);
+// -> @include border-radius-left(4px);
+// -> @include border-radius-right(4px);
+// -> @include border-radius-bottom(4px);
+// -> @include border-radius-top(4px);
+
+/////////////////////////////////////////////////////////////////////////
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin border-radius-right($radius) {
+  -webkit-border-top-right-radius: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+  border-top-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+@mixin border-radius-left($radius) {
+  -webkit-border-top-left-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  border-top-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin border-radius-bottom($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin border-radius-top($radius) {
+  -webkit-border-top-right-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////
+// GRADIENT
+// -> @include background-gradient(#fff,#eee);
+/////////////////////////////////////////////////////////////////////////
+
+@mixin background-gradient($color1,$color2){
+  background: $color1; 
+  background:        -webkit-gradient(linear, 0% 0%, 0% 100%, from($color1), to($color2));
+  background: -webkit-linear-gradient(top, $color1, $color2); 
+  background:     -ms-linear-gradient(top, $color1, $color2);
+  background:         linear-gradient($color1, $color2);  
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+// TRANSITION
+// -> @include transition(width, 0.4s, ease-out, 0s)
+/////////////////////////////////////////////////////////////////////////
+
+/*
+@mixin transition($property, $duration:0.3s, $function: ease, $delay: 0s){
+   -webkit-transition: $property $duration $function $delay;   
+   -ms-transition: $property $duration $function $delay; 
+   transition: $property $duration $function $delay; 
+} */
+
+/////////////////////////////////////////////////////////////////////////
+// BOX SHADOW
+// -> @include box-shadow($top, $left, $blur, $color, $inset: false);
+/////////////////////////////////////////////////////////////////////////
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////
+// ROTATE
+// -> @include rotate(90);
+/////////////////////////////////////////////////////////////////////////
+
+@mixin rotate($deg) {  
+  -webkit-transform: rotate(#{$deg}deg);
+  -ms-transform: rotate(#{$deg}deg);
+  transform: rotate(#{$deg}deg);
+}
+
+/////////////////////////////////////////////////////////////////////////
+// BOX SIZING
+// -> @include box-sizing;
+/////////////////////////////////////////////////////////////////////////
+
+@mixin box-sizing ($value: border-box) {
+        -webkit-box-sizing: $value;
+           -moz-box-sizing: $value;
+                box-sizing: $value;
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+// CLEARFIX
+// -> @include clearfix;
+/////////////////////////////////////////////////////////////////////////
+
+@mixin clearfix{
+   zoom:1;
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+// PLACEHOLDER TEXT
+// -> @include placeholder-text-color(#000);
+// -> @include placeholder-text-transform(font-size);
+// -> @include placeholder-text-fadeOut();
+/////////////////////////////////////////////////////////////////////////
+
+
+/* - Placeholder text color - - */
+
+@mixin placeholder-text-color ($color) {
+  &:-moz-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+}
+
+
+/* - Placeholder text transform - - */
+
+@mixin placeholder-text-transform ($transform) {
+  &:-moz-placeholder {
+    text-transform: $transform;
+  }
+  &::-moz-placeholder {
+    text-transform: $transform;
+  }
+  &:-ms-input-placeholder {
+    text-transform: $transform;
+  }
+  &::-webkit-input-placeholder {
+    text-transform: $transform;
+  }
+}
+
+
+/* - Placeholder text fade  out - - */
+
+@mixin placeholder-text-fadeOut {
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+
+

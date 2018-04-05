@@ -1,0 +1,174 @@
+
+//
+// GLOBAL
+//
+
+////////////////////////////////////////////////////////////////
+// VP320
+////////////////////////////////////////////////////////////////
+
+@include VP320 {
+
+
+	.test-inverted {
+		height:100px;
+		width: 100px;
+		border-radius: 50%;
+		background: color(yellow);
+		position: fixed;
+		right: 0px;
+		z-index: 201;
+
+		&.one {
+			top: 0px;
+		}
+		&.two {
+			top: 50%;
+			
+		}
+		&.three {
+			bottom: 100px;
+		}
+
+		&.-on-inverted {
+			background: color(pink);
+		}
+	}
+
+	/* line */
+	.js-el-area {
+		position: absolute;
+		background: color(yellow);
+		height: 1px;
+		width: 100%;
+		top: 0;
+		left: 0;
+		z-index: 200;
+	}
+
+	img {
+		height: auto;
+		width: 100%;
+	}
+
+	.-inverted {
+		color: $white;
+		* {
+			color: $white;
+		}
+	}
+
+// - - SECTIONS
+
+	[class='s-']{
+		// border-top: 1px solid #666;
+		padding: 2rem 0;
+	}
+
+
+// - - Hide
+
+	.-hide-mobile {
+		display: none;
+	}
+	.-hide-mobile-tablet {
+		display: none;
+	}
+
+	.cache-svg-sprite{
+		height:0;
+		overflow:hidden;
+	}
+
+
+// BACKGROUND  POSITION
+
+	.-bg{
+		&-pos-leftTop{
+			background-position:left top!important;
+		}
+
+		&-pos-leftCenter{
+			background-position:left center!important;
+		}
+
+		&-pos-leftBottom{
+			background-position:left bottom!important;
+		}
+
+
+		&-pos-centerTop{
+			background-position:center top!important;
+		}
+
+		&-pos-centerCenter{
+			background-position:center center!important;
+		}
+
+		&-pos-centerBottom{
+			background-position:center bottom!important;
+		}
+
+		&-pos-rightTop{
+			background-position:right top!important;
+		}
+
+		&-pos-rightCenter{
+			background-position:right center!important;
+		}
+
+		&-pos-rightBottom{
+			background-position:right bottom!important;
+		}
+	}
+
+
+// - - Colors Background
+
+
+
+// - - Colors text
+
+
+}
+
+////////////////////////////////////////////////////////////////
+// VP768
+////////////////////////////////////////////////////////////////
+
+@include VP768 {
+
+// - - Show
+
+	.-hide-mobile {
+		display: block;
+	}
+
+}
+
+////////////////////////////////////////////////////////////////
+// VP1024
+////////////////////////////////////////////////////////////////
+
+@include VP1024 {
+
+// - - Show
+
+	.-hide-mobile-tablet {
+		display: block;
+	}
+}
+
+////////////////////////////////////////////////////////////////
+// VP1280
+////////////////////////////////////////////////////////////////
+
+@include VP1280 {
+
+// - - Hide 
+
+	.-hide-desktop {
+		display: none;
+	}
+
+}

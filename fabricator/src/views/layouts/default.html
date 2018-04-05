@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="" class="{{class-html}} common-ground no-touch no-js">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{{title}}</title>
+
+	{{#if fabricator}}<link rel="stylesheet" href="{{#if baseurl}}{{ baseurl }}/{{/if}}assets/fabricator/styles/f.css">{{/if}}
+
+	<link rel="stylesheet" href="{{#if baseurl}}{{ baseurl }}/{{/if}}assets/at/styles/at.css">
+	<link rel="stylesheet" href="{{#if baseurl}}{{ baseurl }}/{{/if}}assets/styles/ui-styles.css">
+
+	<!-- toolkit styles -->
+	<!--
+	<link rel="stylesheet" href="{{#if baseurl}}{{ baseurl }}/{{/if}}assets/toolkit/styles/toolkit.css">
+	-->
+	<!-- /toolkit styles -->
+
+
+	
+
+</head>
+<body class="{{#if fabricator}}fabricator{{/if}} {{class-body}} f-menu-overtake -f-show-extras">
+
+
+	{{> f-svg-sprites}}	
+
+	{{#if fabricator}}
+		{{> f-icons}}
+		{{> f-control-bar}}
+		{{> f-menu}}
+		<div class="f-container">
+			
+	{{/if}}
+
+
+	{% body %}
+
+
+	{{#if fabricator}}
+		</div>
+		<script
+  src="http://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+	<script src="{{#if baseurl}}{{ baseurl }}/{{/if}}assets/fabricator/scripts/f.js"></script>
+	{{/if}}
+
+
+
+</body>
+</html>

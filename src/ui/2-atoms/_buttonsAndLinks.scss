@@ -1,0 +1,281 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+BUTTONS & LINKS
+*/ 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Table of contents 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// - - Links
+// - - Buttons
+//
+//
+// - - RWD 
+
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+	(i) -> Scoped so only everything inside prefix will inherit
+	(i) -> "$prefix" is inherited from -> src/core/_sass/_variables.scss
+
+	(i) -> Themes -> dark "$theme-dark" &  light "$theme-light" 
+*/ 
+
+
+[class ^= "#{$prefix}"] {
+
+
+////////////////////////////////////////////////////////////////
+// VP320 - MOBILE AND TOUCH FIRST
+////////////////////////////////////////////////////////////////
+
+@include VP320 {
+
+
+////// LINKS
+
+	a {
+		color:$link;
+		text-decoration:underline;
+		position:relative;
+		outline: none!important; 
+
+		&:link{
+			
+		} 
+
+		&:hover{
+			text-decoration:underline;
+			color:$link-hover;
+		} 
+
+		&:visited{
+			color:$white;
+		} 
+
+		&:active{
+			color:$link-click;
+		} 
+
+		&:focus{
+			color:$link-click;	
+		} 
+
+		/* Bold */ 
+		&.-bold{
+			font-weight: bold;
+		}
+
+	} // a END
+
+
+	/* Theme dark */
+	&.-theme-dark,
+	.-theme-dark{
+		
+		a{
+
+			color:$white;
+
+			&:link{
+				
+			} 
+
+			&:hover{
+				color:$link-dark-hover;
+			} 
+
+			&:visited{
+				
+			} 
+
+			&:active{
+				color:$link-dark-click;
+			} 
+
+			&:focus{
+				color:$link-dark-click;	
+			} 
+		}
+		
+	}
+
+
+
+
+////// BUTTONS
+
+	.btn {
+
+		@include border-radius(4px);
+		border:none; // Needed for input
+		line-height:1;
+		font-size:1em;
+		font-weight:bold;
+		padding:1em 2em;
+		display:inline-block;
+		position:relative;
+		text-decoration:none;
+
+		background:$int-green;
+		color:$white;
+		
+		&:hover{
+			color:$white;
+			text-decoration:none;
+			background:darken($int-green, 8%);
+		} 
+
+
+
+
+
+// - - Features
+
+		/* .ra-theme-dark &{
+			background:#fff;
+			color:#2a2a2a;
+			&:hover{
+				background:#eee;
+			} 
+		}
+
+		.ra-theme-light &{
+			background:#2a2a2a;
+			color:#fff;
+			&:hover{
+				background:#000;
+			} 
+		} */
+
+
+		&:visited{
+			
+		} 
+
+		&:active{
+			background:#333;
+			border-bottom:4px solid #333;	
+			color:#fff;
+		} 
+
+		&:focus{
+			outline:none;
+		}
+
+		// Sizes
+		&.-small{
+			padding:12px 30px;
+		}
+
+		&.-large{
+			font-size:15px;
+			padding:18px 40px;
+		}
+
+
+
+	
+
+		// Disabled
+		&.-disabled, 
+		&:disabled{
+			background:#a4a5a6;
+			border-bottom:4px solid #959595;
+			color:rgba(255,255,255,.8);
+			cursor:default;
+
+			&:hover{
+				background:#a4a5a6;
+				border-bottom:4px solid #959595;
+				color:rgba(255,255,255,.8);
+				cursor:default;
+			}
+
+		}
+
+	    // Touch normalize (Hover + focus, Active, )
+		.touch & {
+			
+			text-decoration:none;
+
+				&:hover,
+				&:focus{
+					text-decoration:none;
+				} 
+
+				&:active{
+					text-decoration:none;
+				} 
+
+		} // .touch END	
+
+	} // .bth-v1 END
+
+
+
+	&.-theme-dark,
+	.-theme-dark &{
+		
+		.btn{
+			background:$int-red;
+			color:$white;
+			
+			&:hover{
+				color:$white;
+				background:darken($int-red, 8%);
+			} 
+		}
+		
+	}
+
+
+
+} // VP320 END
+
+
+////////////////////////////////////////////////////////////////
+// MSIE - INTERNET EXPLORER
+////////////////////////////////////////////////////////////////
+
+@include msie {
+
+		.msie-8 &{
+			
+		}
+
+		.msie-9 &{
+			
+		}
+
+} // msie END
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+////// END
+
+
+
+} // END [class ^= "#{$prefix}"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

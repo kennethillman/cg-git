@@ -1,0 +1,332 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
+// SECTION
+//  
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Table of contents 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// - VP320
+// - VP480
+// - VP768
+// - VP1024
+// - VP1280  
+// - VP1440
+// - VP1700  
+//
+// - - MS Internet explorer
+// - - NO JavaScript
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+//////// CLASS NAME
+$className: o-case-next;
+
+
+.#{$className}{
+
+////////////////////////////////////////////////////////////////
+// VP320 - MOBILE AND TOUCH FIRST
+////////////////////////////////////////////////////////////////
+
+
+@include VP320 {
+
+
+// - - General
+	min-height: 100px;
+	background: #f2fafe;
+	text-align: center;
+	text-decoration: none;
+
+
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+
+
+
+	.label {
+		display: inline-block;
+		font-family: $font-a;
+		line-height: 1;
+		font-size: 11px;
+		margin-bottom: 6px;
+	}
+
+	.text {
+		font-family: $font-b;
+		line-height: 1;
+		font-size: 18px;
+		margin-bottom: 6px;
+	}
+
+	.arrow {
+		margin: 0 auto;
+		width: 25px;
+		height: 25px;
+	}
+
+	svg {
+		height: 100%;
+		width: 100%;
+	}
+
+	&.-inverted {
+		svg {
+			fill: #fff;
+		}
+	}
+
+	&.-viasatsport {
+		background-color: $visatsport;
+
+	}
+
+	&.-sfkidsplay {
+			background-color: #e3f1f7;
+	}
+
+	&.-vattenfall {
+		background-color: #092346;
+	}
+
+	&.-lf {
+		background-color: #f3f3f3 ;
+	}
+
+
+
+
+// - - Interaction (States)
+
+/*
+			.touch &{
+			    &:active{
+
+			    }
+			}
+
+			.no-touch &{
+			    &:hover{
+
+			    }
+			    &:active{
+
+			    }
+			}
+
+			&:focus{
+
+			}
+*/
+
+
+
+
+
+
+} // VP320 END
+
+
+
+
+
+////////////////////////////////////////////////////////////////
+// VP480
+////////////////////////////////////////////////////////////////
+
+@include VP480 {
+	
+
+
+} // VP480 END
+
+
+////////////////////////////////////////////////////////////////
+// VP768
+////////////////////////////////////////////////////////////////
+
+@include VP768 {
+
+	min-height: 300px;
+
+	.label {
+		font-size: 22px;
+		margin-bottom: 12px;
+	}
+
+	.text {
+		font-size: 36px;
+		margin-bottom: 12px;
+	}
+
+	.arrow {
+		width: 50px;
+		height: 50px;
+	}
+
+	&.-viasatsport {
+		background-color: $visatsport;
+		background-image: url('/assets/images/viasport-top-image@2x.png');
+		background-size: auto 85%;
+		background-repeat: no-repeat;
+		background-position: left bottom;
+	}
+
+	&.-sfkidsplay {
+			background-color: #e3f1f7;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: left bottom;
+
+			/*
+				Waiting for images from Martin
+			*/
+
+			background-image:url(/assets/images/sfkidsplay/group-2.png); // Remove @3
+
+			/* @2x Images (Pixel Ratio of 1.25+) */
+			@media only screen and (-o-min-device-pixel-ratio: 5/4),
+			       only screen and (-webkit-min-device-pixel-ratio: 1.25),
+			       only screen and (min-device-pixel-ratio: 1.25),
+			       only screen and (min-resolution: 1.25dppx) {
+			    &.-viasatsport {background-image:url(/assets/images/sfkidsplay/group-2@2x.png);} // Change @3 to @2 
+			}
+
+			/* @3x Images (Pixel Ratio of 2.25+) */
+			@media only screen and (-o-min-device-pixel-ratio: 9/4),
+			       only screen and (-webkit-min-device-pixel-ratio: 2.25),
+			       only screen and (min-device-pixel-ratio: 2.25),
+			       only screen and (min-resolution: 2.25dppx) {
+			    &.-viasatsport {background-image:url(/assets/images/sfkidsplay/group-2@3x.png);}
+			}
+	}
+
+
+	&.-vattenfall {
+		background-image: url('/assets/images/vattenfall/road-bridge.jpg');
+			background-size: cover;
+	}
+
+	&.-lf {
+		background-color: #f3f3f3 ;
+		background-image: url('/assets/images/lf/lf-illustration.svg');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: left bottom;
+	}
+	
+
+} // VP768 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1024
+////////////////////////////////////////////////////////////////
+
+@include VP1024{
+	
+	
+		
+} // VP1024 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1280 
+////////////////////////////////////////////////////////////////
+
+@include VP1280 {
+	
+
+	
+} // VP1280 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1680
+////////////////////////////////////////////////////////////////
+
+@include VP1680 {
+	
+	
+
+	
+} // VP1680 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1680
+////////////////////////////////////////////////////////////////
+
+@include VP1920 {
+	
+	
+
+	
+} // VP1920 END
+
+
+////////////////////////////////////////////////////////////////
+// MSIE - INTERNET EXPLORER
+////////////////////////////////////////////////////////////////
+
+@include msie {
+		
+	.ie-8 &{
+		
+	}
+
+	.msie-9 &{
+		
+	}
+
+} // msie END
+
+
+////////////////////////////////////////////////////////////////
+// NO-JAVASCRIPT
+////////////////////////////////////////////////////////////////
+
+@include no-js {
+	
+	.no-js &{
+		
+	}
+
+} // no-js END
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+////// END
+
+} // END
+
+
+
+
+
+
+
+
+
+
+
+
+
+

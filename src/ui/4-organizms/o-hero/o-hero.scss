@@ -1,0 +1,659 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
+// SECTION
+//  
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Table of contents 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// - VP320
+// - VP480
+// - VP768
+// - VP1024
+// - VP1280  
+// - VP1440
+// - VP1700  
+//
+// - - MS Internet explorer
+// - - NO JavaScript
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+//////// CLASS NAME
+$className: o-hero;
+
+
+.#{$className}{
+
+////////////////////////////////////////////////////////////////
+// VP320 - MOBILE AND TOUCH FIRST
+////////////////////////////////////////////////////////////////
+
+
+@include VP320 {
+
+
+// - - General
+	
+		text-align: center;
+		padding-top: 180px;
+
+		&.-flex {
+			display: flex;
+			align-items: center;
+		}
+
+		&.-inverted {
+			color: $white;
+		}
+
+		h1 {
+			font-size: 18px;
+			font-family: $font-b;
+			margin:0 0 20px;
+			font-weight: normal;
+			display: block;
+		}
+
+		.text-wrapper {
+			margin: 0 auto;
+			max-width: 86%;
+		}
+
+		p {
+			font-family: $font-a;
+			font-size: 30px;
+			line-height: 42px;
+		}
+
+		.body {
+			display: block;
+			width: 100%
+		}
+
+
+// - - Startpage
+
+		&.-startpage {
+			background: url('/assets/images/illustrationer@2x.png') no-repeat;
+			background-size: cover;
+		}
+
+
+// - - Cases
+
+		&.-case {
+
+			padding-top: 13rem;
+			padding-bottom: 64vw;
+			overflow: hidden;
+			position: relative;
+			background-size: cover;
+			background-repeat: no-repeat;
+			margin-bottom: 10px;
+
+			h1 {
+				font-size: 38px;
+				line-height: 46px;
+				font-family: $font-b;
+			}
+
+			p {
+				font-family: $font-b;
+				font-size: 22px;
+				line-height: 28px;
+			}
+
+			.btn {
+				margin: 2rem 0; 
+			}
+
+			.tilted {
+				position: absolute;
+				top: 100%;
+				left: 50%;
+				margin-top: -60px;
+				margin-left: -100%;
+				background: $white;
+				transform: rotate(-7deg);
+				height: 200px;
+				width: 200%;
+				z-index: 10;
+			}
+
+		}
+
+		.video-bg {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    height: 100%;
+		    width: 100%;
+		    overflow: hidden;
+
+		    .b-video--player {
+	    		position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    -webkit-transform: translate(-50%,-50%);
+			    -moz-transform: translate(-50%,-50%);
+			    -o-transform: translate(-50%,-50%);
+			    -ms-transform: translate(-50%,-50%);
+			    transform: translate(-50%,-50%);
+			    min-width: 100%;
+			    min-height: 100%;
+			    width: auto;
+			    height: auto;
+		    }
+
+		}
+
+	// Viasatsport
+
+		&.-viasatsport {
+			background-color: $visatsport;
+			background-image: url('/assets/images/viasport-top-image@2x.png');
+			background-size: 90%;
+			background-position: left 106%;
+		}
+
+
+	// SF Kidz play
+
+		&.-sfkidsplay {
+			text-align: center;
+			background-color: #67c4e5;
+			background-position: center -109px;
+			background-image:url('/assets/images/sfkidsplay/yellow-bg.svg');
+
+			.gc {
+				position: relative;
+				z-index: 11;
+			}
+
+
+			.toon {
+				display: none;
+				position: absolute;
+				z-index: 10;
+			}
+
+			.tilted {
+			    z-index: 9;
+			}
+
+			.green {
+				display: block;
+				width: 140px;
+				bottom: 30px;
+				right: 20px;
+			}
+
+
+			
+		}
+
+
+	// Vattenfall
+
+		&.-vattenfall {
+			background-image: url('/assets/images/vattenfall/road-bridge.jpg');
+			background-size: cover;
+			padding-bottom: 18vw;
+
+			.body {
+				position: relative;
+				z-index: 2;
+			}
+
+		}
+		
+
+	// LF
+
+		&.-lf {
+			background-color: #f3f3f3 ;
+			background-image: url('/assets/images/lf/lf-illustration.svg');
+			background-position: -17vw bottom;
+			position: relative;
+			background-size: 200%;
+			padding-bottom: 40vw;
+
+			.hand {
+				display: none;
+			}
+
+			.gc {
+				position: relative;
+				z-index: 1;
+			}
+
+		}
+
+
+
+
+
+
+
+
+
+} // VP320 END
+
+
+
+
+
+////////////////////////////////////////////////////////////////
+// VP480
+////////////////////////////////////////////////////////////////
+
+@include VP480 {
+
+	// - - Cases
+
+		&.-case {
+
+			padding-top: 8rem;
+			padding-bottom: 17rem;
+
+			.btn {
+				position: absolute;
+				bottom: 100px;
+				right: 4vw;
+			}
+
+
+		}
+	
+
+	// Viasatsport
+
+		&.-viasatsport {
+			background-size: 60%;
+		}
+
+		&.-lf {
+			background-size: 164%;
+			background-position: -70vw bottom;
+		}
+
+
+	// SF Kidz play
+
+		&.-sfkidsplay {
+
+			   background-position: center -139px;
+
+			.purple {
+				width: 160px;
+				left: 4%;
+				display: block;
+				bottom:80px;
+			}
+
+			.green {
+				width: 160px;
+				right: 6%;
+			}
+
+
+			
+		}
+
+
+
+
+} // VP480 END
+
+////////////////////////////////////////////////////////////////
+// VP600
+////////////////////////////////////////////////////////////////
+
+@include VP600 {
+
+	&.-case {
+		margin-bottom: 20px;
+		.btn {
+			bottom: 100px;
+			right: 80px;
+		}
+	}
+
+	&.-viasatsport {
+		background-size: 47%;
+	}
+
+	&.-lf {
+		background-size: 144%;
+		background-position: left bottom;
+		.hand {
+			display: block;
+			position: absolute;
+		    width: 220px;
+		    bottom: -80px;
+		    left: -20px;
+		}
+	}
+
+	// SF Kidz play
+
+		&.-sfkidsplay {
+
+	
+
+
+		}
+
+
+}
+
+////////////////////////////////////////////////////////////////
+// VP768
+////////////////////////////////////////////////////////////////
+
+@include VP768 {
+
+		padding-top: 60px;
+		min-height: 100vh;
+
+		.text-wrapper {
+			max-width: 70%;
+		}	
+
+
+		&.-case {
+
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: -moz-box;
+				display: -ms-flexbox;
+				display: flex;
+
+				-webkit-flex-align: center;
+				-ms-flex-align: center;
+				-webkit-align-items: center;
+				align-items: center;
+
+				-webkit-justify-content: center;
+				-ms-justify-content: center;
+				justify-content: center;
+
+
+				padding-top: 4rem;
+    			padding-bottom: 8rem;
+    			margin-bottom: 30px;
+
+
+			h1 {
+				font-size: 48px;
+				line-height: 56px;
+			}
+
+			p {
+				font-size: 28px;
+				line-height: 40px;
+			}
+
+
+
+			h1 {
+				font-size: 68px;
+				line-height: 80px;
+			}
+
+
+			.btn {
+				bottom: 130px;
+			}
+
+			.tilted {
+				position: absolute;
+
+				top: 100%;
+				left: 50%;
+				margin-top: -60px;
+				margin-left: -100%;
+				transform: rotate(-5deg);
+				
+			}
+
+		}
+
+	// Viasatsport
+
+		&.-viasatsport {
+			height: 740px;
+			min-height: 740px;
+			background-size: 320px;
+		}
+
+		&.-lf {
+			height: 740px;
+			min-height: 740px;
+			background-size: 80vw;
+			.hand {
+				width: 210px;
+			    bottom: -70px;
+			    left: -14px;
+			}
+		}
+
+		&.-sfkidsplay {
+
+
+			.purple {
+				display: block;
+				width: 190px;
+				left: auto;
+				right: 5%;
+				bottom: 280px;
+			}			
+
+			.blue {
+				display: block;
+				width: 160px;
+				left: 8%;
+				bottom: 220px;
+			}
+
+			.yellow {
+				display: none;
+				width: 100px;
+				left: 20px;
+				bottom: 0;
+
+			}
+			.green {
+				width:220px;
+				right:20%;			
+			}
+
+		}
+
+
+} // VP768 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1024
+////////////////////////////////////////////////////////////////
+
+@include VP1024{
+
+	&.-case { 
+
+		max-height: 1024px;
+		min-height: 82vh;
+		margin-bottom: 40px;
+	}
+	
+	// Viasatsport
+
+		&.-viasatsport {
+			min-height: 740px;
+			background-size: 430px;
+			background-position: left 120%;
+			background-repeat: no-repeat;
+		}
+
+		&.-lf {
+			background-size: 80vw;
+			min-height: 740px;
+			.hand {
+			    width: 200px;
+			    bottom: -60px;
+			    left: 40px;
+			}
+		}
+
+		&.-sfkidsplay {
+
+			.yellow {
+				//width: 130px;
+				display: none;
+			}
+			.green {
+				width:220px;
+				right: 24%;
+			}
+
+		}
+		
+} // VP1024 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1280 
+////////////////////////////////////////////////////////////////
+
+@include VP1280 {
+	
+		h1 {
+			font-size: 20px;
+		}
+
+		p {
+			font-family: $font-a;
+			font-size: 36px;
+			line-height: 48px;
+		}
+
+		&.-case {
+			.tilted {
+				transform: rotate(-4deg);
+			}
+		}
+
+
+	// Case
+
+		&.-case {
+			.btn {
+				position: absolute;
+				bottom: 150px;
+				right: 80px;
+			}
+		}
+
+	// Viasatsport
+
+		&.-viasatsport {
+			background-size: 500px;
+			background-position: left 120%;
+			background-repeat: no-repeat;
+		}
+
+		&.-lf {
+			background-size: 70vw;
+			.hand {
+			    width: 270px;
+			    bottom: -8vh;
+			    left: 1vw;
+			}
+		}
+
+		&.-sfkidsplay {
+
+			.purple {
+				display: block;
+				width: 250px;
+				left: auto;
+				right: 3%;
+				bottom: 300px;
+			}			
+
+		}
+
+	
+} // VP1280 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1680
+////////////////////////////////////////////////////////////////
+
+@include VP1680 {
+
+	margin-bottom: 50px;
+
+	.tilted {
+		display: none;
+		
+	}
+
+	&.-lf {
+		.hand {
+		    left: 10vw;
+		    bottom: -80px;
+		}
+	}
+
+	&.-sfkidsplay {
+
+		background-position: center -20vh;	
+
+	}
+
+	
+} // VP1680 END
+
+
+
+////////////////////////////////////////////////////////////////
+// VP1920
+////////////////////////////////////////////////////////////////
+
+@include VP1920 {
+		&.-sfkidsplay {
+
+		background-position: center -12vh;	
+
+	}
+} // VP1920 END
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+////// END
+
+} // END
+
+
+
+
+
+
+
+
+
+
+
+
+
+

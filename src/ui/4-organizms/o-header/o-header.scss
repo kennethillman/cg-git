@@ -1,0 +1,336 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
+// SECTION
+//  
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Table of contents 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// - VP320
+// - VP480
+// - VP768
+// - VP1024
+// - VP1280  
+// - VP1440
+// - VP1700  
+//
+// - - MS Internet explorer
+// - - NO JavaScript
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+//////// CLASS NAME
+$className: o-header;
+
+
+.#{$className}{
+
+////////////////////////////////////////////////////////////////
+// VP320 - MOBILE AND TOUCH FIRST
+////////////////////////////////////////////////////////////////
+
+
+@include VP320 {
+
+	position: fixed;
+	width: 100%;
+	padding: 0;
+	z-index: 20;
+	
+	@include transition(background .275s ease-in);
+
+	.-at-show-header & {
+		background: rgba(255,255,255,1);
+
+		a {
+			color: #000;
+		}
+	}
+
+
+
+	.-at-scroll--top & {
+		background: rgba(255,255,255,0);
+		&.-inverted {
+			a {
+				color: #fff;
+			}
+		}
+	}
+
+	@include transitionTwo(transform .5s ease-out, background .375s ease-in);
+	//@include transition(transform .5s ease-out);
+	// @include transition(background .375s ease-in);
+
+	@include transform(translateY(-130%));
+
+
+	.-at-show-header & {
+		@include transform(translateY(0));
+	}
+
+// - - General
+	
+	nav {
+		@include clearfix();
+		text-align: center;
+
+		a {
+			position: relative;
+			font-size: 18px;
+			display: inline-block;
+			font-family: $font-c;
+			line-height: 1;
+			text-decoration: none;
+			margin: 28px 25px;
+			&.-active {
+				&:after {
+					content: '';
+					position: absolute;
+					bottom: -10px;
+					left: 0;
+					width: 92%;
+					height: 3px;
+					background: $blue2;
+					margin-left: 4%;
+				}
+			}
+		}
+	}
+
+	figure {
+		position: absolute;
+		top: 110px;
+		left: 50%;
+		margin-left: -52px;
+
+		svg {
+			width: 104px;
+		}
+		
+	}
+
+// - - Features
+
+
+	&.-inverted {
+		text {
+			fill: $white;
+		}
+	}
+
+// - - Interaction (States)
+
+/*
+
+	.touch &{
+	    &:active{
+
+	    }
+	}
+
+	.no-touch &{
+	    &:hover{
+
+	    }
+	    &:active{
+
+	    }
+	}
+
+	&:focus{
+
+	}
+
+*/
+
+
+
+
+
+
+} // VP320 END
+
+
+@include XSMALL {
+
+	figure {
+		
+		opacity: 0;
+		@include transition(opacity 0.375s);
+
+		.-at-scroll--top & {
+			opacity: 1;
+		}
+
+	}
+
+	nav {
+
+	}
+
+} 
+
+
+////////////////////////////////////////////////////////////////
+// VP480
+////////////////////////////////////////////////////////////////
+
+@include VP480 {
+	
+	nav {
+		text-align: center;
+		float: right;
+		margin-right: 12px;
+		a {
+			font-size: 18px;
+			display: inline-block;
+			font-family: $font-c;
+			line-height: 1;
+			float: left;
+			text-decoration: none;
+		}
+	}
+
+	figure {
+		position: absolute;
+		top: 13px;
+		left: 50px;
+		margin-left: 0;
+
+		svg {
+			width: 74px;
+		}
+	}
+
+} // VP480 END
+
+////////////////////////////////////////////////////////////////
+// 600
+////////////////////////////////////////////////////////////////
+
+@include VP600 {
+	
+
+
+
+} // VP600 END
+
+////////////////////////////////////////////////////////////////
+// VP768
+////////////////////////////////////////////////////////////////
+
+@include VP768 {
+
+
+
+	.-at-scroll--top & {
+		
+		
+	}
+
+
+	
+
+} // VP768 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1024
+////////////////////////////////////////////////////////////////
+
+@include VP1024{
+	
+
+	
+		
+} // VP1024 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1280 
+////////////////////////////////////////////////////////////////
+
+@include VP1280 {
+	
+
+	
+} // VP1280 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1680
+////////////////////////////////////////////////////////////////
+
+@include VP1680 {
+	
+	
+
+	
+} // VP1680 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1680
+////////////////////////////////////////////////////////////////
+
+@include VP1920 {
+	
+	
+
+	
+} // VP1920 END
+
+
+////////////////////////////////////////////////////////////////
+// MSIE - INTERNET EXPLORER
+////////////////////////////////////////////////////////////////
+
+@include msie {
+		
+	.ie-8 &{
+		
+	}
+
+	.msie-9 &{
+		
+	}
+
+} // msie END
+
+
+////////////////////////////////////////////////////////////////
+// NO-JAVASCRIPT
+////////////////////////////////////////////////////////////////
+
+@include no-js {
+	
+	.no-js &{
+		
+	}
+
+} // no-js END
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+////// END
+
+} // END
+
+
+
+
+
+
+
+
+
+
+
+
+
+

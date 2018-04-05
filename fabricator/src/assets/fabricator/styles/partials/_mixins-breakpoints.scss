@@ -1,0 +1,127 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
+// MIXINS - BREAKPOINT/MEDIA/CONTENT
+//
+
+/* MIXINS-BREAKPOINTS */
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Table of contents
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// - VARIABLE SETUP
+// - - - Viewport
+// - - - Breakpoints
+// - - - Theming
+// - - - Extras
+//
+// - CONTENT MIXINS
+// - - - Viewport
+// - - - Theming
+// - - - Extras
+//
+// - INLINE MEDIA MIXIN MAGIC
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// VARIABLE SETUP
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// MQ Viewport
+$f-VP320:                                 false !default;
+$f-VP480:                                 false !default;
+$f-VP600:                                 false !default;
+$f-VP768:                                 false !default;
+$f-VP1024:                                false !default;
+$f-VP1280:                                false !default;
+$f-VP1440:                                false !default;
+$f-VP1680:                                false !default;
+$f-VP1920:                                false !default;
+
+// Only ranges
+$f-MOBILE:                                false !default;
+$f-TABLET:                                false !default;
+$f-DESKTOP:                               false !default;
+
+//Breakpoints
+// Values not set
+$f-bp-480:                                480px !default;
+$f-bp-600:                                600px !default;
+$f-bp-768:                                768px !default;
+$f-bp-1024:                               998px !default;
+$f-bp-1280:                               1280px !default;
+$f-bp-1440:                               1440px !default;
+$f-bp-1680:                               1680px !default;
+$f-bp-1920:                               1920px !default;
+
+
+// Extras
+$f-msie:                                  false !default;
+$f-no-js:                                 false !default;
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// CONTENT MIXINS
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Viewport
+@mixin f-VP320                            { @if $f-VP320                     { @content; } }
+@mixin f-VP480                            { @if $f-VP480                     { @include media-min($f-bp-480)  {@content;} }  }
+@mixin f-VP600                            { @if $f-VP600                     { @include media-min($f-bp-600)  {@content;} }  }
+@mixin f-VP768                            { @if $f-VP768                     { @include media-min($f-bp-768)  {@content;} }  }
+@mixin f-VP1024                           { @if $f-VP1024                    { @include media-min($f-bp-1024) {@content;} }  }
+@mixin f-VP1280                           { @if $f-VP1280                    { @include media-min($f-bp-1280) {@content;} }  }
+@mixin f-VP1440                           { @if $f-VP1440                    { @include media-min($f-bp-1440) {@content;} }  }
+@mixin f-VP1680                           { @if $f-VP1680                    { @include media-min($f-bp-1680) {@content;} }  }
+@mixin f-VP1920                           { @if $f-VP1920                    { @include media-min($f-bp-1920) {@content;} }  }
+
+/// Only ranges
+@mixin f-MOBILE                           { @if $f-MOBILE                    { @include media-only(240px, 599px) {@content;} } }
+@mixin f-TABLET                           { @if $f-TABLET                    { @include media-only(600px, 997px) {@content;} } }
+
+////// Extras
+@mixin f-msie                             { @if $f-msie                      {@content;} }
+@mixin f-no-js                            { @if $f-no-js                     {@content;} }
+
+
+/////////////////////////////////////////////////////////////////////////
+// INLINE MEDIA MIXIN MAGIC
+// -> http://jakearchibald.github.io/sass-ie/
+/////////////////////////////////////////////////////////////////////////
+
+//////// BREAKPOINTS FOR MODULES
+
+$f-fix-mqs: false !default;
+
+@mixin media-min($f-width) {
+    @if $f-fix-mqs {
+        @if $f-fix-mqs >= $f-width {
+            @content;
+        }
+    } @else {
+        @media screen and (min-width: $f-width) {
+            @content;
+        }
+    }
+}
+
+@mixin media-max($f-width) {
+    @if $f-fix-mqs {
+        @if $f-fix-mqs <= $f-width {
+            @content;
+            }
+    } @else {
+        @media screen and (max-width: $f-width) {
+            @content;
+        }
+    }
+}
+
+@mixin media-only($f-minwidth, $f-maxwidth) {
+    @media screen and (min-width: $f-minwidth) and (max-width: $f-maxwidth) {
+        @content;
+    }
+}

@@ -1,0 +1,8 @@
+{
+    {{#shapes}}
+    "{{base}}": {
+        "width":  "{{width.outer}}px",
+        "height": "{{height.outer}}px"
+    }{{^last}},{{/last}}
+    {{/shapes}}
+}

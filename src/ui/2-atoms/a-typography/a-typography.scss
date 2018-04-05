@@ -1,0 +1,181 @@
+
+//
+// C-PLACEHOLDER
+//
+
+//////////////////////////////////////////////////////
+// - Table of contents
+//////////////////////////////////////////////////////
+//
+// - VP320
+//
+//////////////////////////////////////////////////////
+
+//////// CLASS NAME
+$className: c-placeholder;
+
+.#{$className} {
+
+//////////////////////////////////////////////////////
+// VP320 - MOBILE AND TOUCH FIRST
+//////////////////////////////////////////////////////
+
+
+	@include VP320 {
+
+		position: relative;
+		display: block;
+		padding: 20px;
+		height: 100px;
+		text-align: center;
+		background: $blue1;
+
+
+	// - - Children
+
+		div {
+			text-align: center;
+			margin: 0;
+			padding: 0;
+			font-family: $font-a;
+		}
+
+		.text {
+			color: rgba(0,0,0,.36);
+			font-size: 20px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			margin:0;
+		}
+
+		img {
+			width:100%;
+			height: auto;
+		}
+
+
+	// - - Modifiers
+
+		&.-op-75 {
+			opacity: .75;
+		}
+
+		&.-op-50 {
+			opacity: .5;
+		}
+
+		&.-round {
+			@include border-radius(50%);
+		}
+
+		// Icon
+
+		&.-icon {
+			position: relative;
+			figure{
+				margin: 0;
+				display: inline-block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				@include transform(translate(-50%, -50%));
+			}
+			svg {
+				height: 3.5rem;		
+			}
+		}
+
+		// Size
+
+		&.-grid {
+			position: relative;
+			height:0;
+			padding:0;
+			background: rgba(0,0,0,0);
+
+			&:before{
+				content:'';
+				width:100%;
+				height:1000rem;
+				position:absolute;
+				top:0;
+				left:0;
+				background: rgba(153,204,153,.1);
+			}
+
+			&.-odd{
+				&:before{
+					background: rgba(153,204,153,.2);
+				}				
+			}
+
+		}
+
+		&.-content {
+			height:auto;
+			@include aspect-ratio-img(1,2);
+		}
+
+		&.-diff {
+			//background: #ddd;
+		}		
+
+		&.-puff {
+			height:auto;
+			@include aspect-ratio-img(2.35,1);
+		}
+
+
+		&.-mini {
+			height: auto;
+			padding: 1.5rem 0;
+			font-size: .75rem;
+		}
+
+		&.-size-small {
+			padding: 5px;
+			height: 50px;
+		}
+
+		&.-text-large {
+			.text {
+				font-size: 30px;
+			}
+		}
+
+		&.-text-small {
+			.text {
+				font-size: 14px;
+			}
+		}
+
+
+
+
+
+
+
+	} // VP320 END
+
+
+
+//////////////////////////////////////////////////////
+////// END
+
+} // END
+
+
+
+
+
+
+
+
+
+
+
+
+
+

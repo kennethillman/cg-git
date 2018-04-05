@@ -1,0 +1,138 @@
+{
+    "arrow-down": {
+        "width":  "38px",
+        "height": "19px"
+    },
+    "arrow-down_(kopia)": {
+        "width":  "38px",
+        "height": "19px"
+    },
+    "arrow-left": {
+        "width":  "24px",
+        "height": "24px"
+    },
+    "arrow-right": {
+        "width":  "24px",
+        "height": "24px"
+    },
+    "bubble": {
+        "width":  "24px",
+        "height": "24px"
+    },
+    "code": {
+        "width":  "24px",
+        "height": "24px"
+    },
+    "diamond": {
+        "width":  "512px",
+        "height": "512px"
+    },
+    "hanna-face": {
+        "width":  "313px",
+        "height": "313px"
+    },
+    "home": {
+        "width":  "24px",
+        "height": "24px"
+    },
+    "ian-face": {
+        "width":  "313px",
+        "height": "313px"
+    },
+    "logo-abs": {
+        "width":  "173px",
+        "height": "36px"
+    },
+    "logo-comviq": {
+        "width":  "120px",
+        "height": "28px"
+    },
+    "logo-lf": {
+        "width":  "247px",
+        "height": "49px"
+    },
+    "logo-moo": {
+        "width":  "196px",
+        "height": "49px"
+    },
+    "logo-ori": {
+        "width":  "207px",
+        "height": "25px"
+    },
+    "logo-pr": {
+        "width":  "220px",
+        "height": "86px"
+    },
+    "logo-sfk": {
+        "width":  "175px",
+        "height": "52px"
+    },
+    "logo-t2": {
+        "width":  "139px",
+        "height": "53px"
+    },
+    "logo-ur": {
+        "width":  "83px",
+        "height": "83px"
+    },
+    "logo-va": {
+        "width":  "221px",
+        "height": "48px"
+    },
+    "logo-vias": {
+        "width":  "174px",
+        "height": "44px"
+    },
+    "logo-vs": {
+        "width":  "221px",
+        "height": "29px"
+    },
+    "menu": {
+        "width":  "24px",
+        "height": "24px"
+    },
+    "mrCan": {
+        "width":  "313px",
+        "height": "313px"
+    },
+    "mrGreg": {
+        "width":  "350.56px",
+        "height": "350.56px"
+    },
+    "mrHenke": {
+        "width":  "313px",
+        "height": "313px"
+    },
+    "mrIan": {
+        "width":  "313px",
+        "height": "313px"
+    },
+    "mrJesper": {
+        "width":  "313px",
+        "height": "313px"
+    },
+    "mrJohansson": {
+        "width":  "313px",
+        "height": "313px"
+    },
+    "mrSkybrand": {
+        "width":  "313px",
+        "height": "313px"
+    },
+    "mrSuter": {
+        "width":  "313px",
+        "height": "313px"
+    },
+    "msHanna": {
+        "width":  "313px",
+        "height": "313px"
+    },
+    "text": {
+        "width":  "24px",
+        "height": "24px"
+    },
+    "xmark": {
+        "width":  "24px",
+        "height": "24px"
+    }
+}

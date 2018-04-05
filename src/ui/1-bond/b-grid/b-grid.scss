@@ -1,0 +1,426 @@
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////
+// Variables // 
+//////////////
+
+$prefix 			: at !default;
+$contentWidth 		: 100% !default; 
+$columns 			: 12 !default;
+$gutter 			: 20 !default;
+$min-width			: 320px !default;
+ 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@mixin grid-cols($col: $columns, $name: g) {
+
+
+/* COLS & PUSH & PULL */
+
+	$columnprefix: $name;
+
+	@for $i from 1 through $columns {	
+		  	
+			@if $i==12 {
+
+				$combo: $i;
+				$comboStart: 1;
+			
+				@for $p from $comboStart through $combo {
+				  	.#{$columnprefix}-#{$p} 	{width:($p / $combo) * 100% ;}
+				}
+
+			} 
+
+			@if $i==12 {
+
+				$combo: $i;
+				$comboStart: 0;
+			
+				@for $p from $comboStart through $combo {
+				  	.gc .#{$columnprefix}-push-#{$p} 	{margin-left:($p / $combo) * 100% ;}
+				}
+
+				@for $p from $comboStart through $combo {
+				  	.gc .#{$columnprefix}-pull-#{$p} 	{margin-right:($p / $combo) * 100% ;}
+				}
+
+			} 
+
+			// @if END 
+
+	} // @for END
+
+}
+
+
+////////////////////////
+// Mixin - Grid  //
+//////////////////////
+
+
+@mixin grid($prefix, $contentWidth, $columns, $gutter, $min-width) {
+
+ 	@include VP320 {
+ 			
+		.#{$prefix}-grid  {
+
+
+/*
+
+	at-grid (Floats)
+			* g-1 / g-12
+	** -reverser-cols-768 / 1024
+			** -small
+			** -medium
+			** -large
+			*** -push
+			*** -pull
+
+	gc
+	* -max (should be full and collapsed )
+	* -full
+	* -ollpased (no-gutter)
+	* -center
+
+	at-grid (Flex --- body.flexbox fallback to float grid)
+	* -vertical-align
+	* -row-direction
+	* ... etc
+
+
+*/
+
+
+// - - - FOR DEMO 	ki -> SG only?
+
+		&.-demo {
+			 [class^="g-"],
+				 div > [class^="g-"]  {
+					margin-bottom: $gutter * 1px;	
+				}
+				.-mt{
+					margin-top: $gutter * 1px;	
+				}
+
+				.gc{
+					overflow:hidden;
+				}
+		}
+
+
+// - - - COLUMNS
+
+		@include grid-cols(12);
+
+		[class^="g-"] {
+		  	float:left;
+		  	padding: 0 $gutter * .5px;
+		  	margin-left: 0;
+		  	margin-right: 0;
+		  	/* position:relative; */
+			/* z-index: 1; */
+			box-sizing:border-box;
+		}
+
+
+// - - - GC - content wrapper
+		.gc {
+			@include clearfix;
+			padding: 0 $gutter * 1px;
+			min-width: $min-width;
+		
+
+// - - - GC - MAXIMIZE 
+
+			/* &[class^="-maxi"] NOT WORKING */
+			&.-maximize{
+				width:100%;
+				padding:0;
+
+				> [class^="g-"],
+				> div > [class^="g-"]  {
+					padding: 0;	
+				}
+
+				[class^="m-"] {
+					margin:0;
+					padding:0;
+				}
+
+
+				.-full-width{
+					> [class^="g-"] {
+						padding: 0 $gutter * 1px;	
+					}
+				}
+
+			}
+
+
+// - - - GC - VERTICLE ALIGN
+			&.-g-eq-heights {
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				display:         flex;
+			}
+			&.-g-reverse {
+				flex-direction: -webkit-row-reverse;
+				flex-direction: -ms-row-reverse;
+				flex-direction: row-reverse;
+			}
+
+			&.-g-v-align,
+			&.-v-align {
+				
+				// .flexbox & {
+					display: -webkit-box;
+					display: -webkit-flex;
+					display: -ms-flexbox;
+					display:         flex;
+					-ms-flex-align: center;
+					-webkit-align-items: center;
+					-webkit-box-align: center;
+					align-items: center;
+				// }
+
+				// .no-flex & {
+					// translate or old ie solution...
+				// }
+
+
+						
+				
+				
+			}
+
+
+// - - - GC - CENTER
+
+			// &.-g-center{
+			&.-g-center{
+				> [class^="g-"]{
+					float:none;
+					margin-right: auto;
+					margin-left: auto;
+					&.g-1 {
+						float:left;
+					}
+				}
+			}
+
+
+// - - - GC - Styleguid layout normalize (outer "margin" -> padding)
+			
+			@include SG {
+				&.f-gc-normalize{
+					width:100%;
+					padding:0;
+				}
+			}
+
+
+
+// - - - GC - FULL WIDTH 
+
+			&.-full-width{
+				width:100%;
+				padding: 0 $gutter * 1px;
+				&.-no-gutter{
+					padding: 0 $gutter * 1px;
+				}
+			}
+
+					
+// - - - GC - NO GUTTER 
+
+			&.-no-gutter{
+				padding: 0 $gutter * .5px;
+				margin-left:auto;
+				margin-right:auto;
+
+				[class^="g-"] {
+					padding: 0;	
+					
+				}
+
+				[class^="m-"] {
+					margin-left:0;
+					margin-right:0;
+				}	
+
+			} // -no-gutter
+
+		} // .gc END
+
+
+
+// - - - ROW
+
+
+
+				.row {
+					@include clearfix;
+				}				
+
+
+
+			} // -grid END
+
+
+
+
+ 		} // VP320 END	
+
+
+		@include VP480 {
+			
+			
+
+
+
+			
+		}
+
+
+ 		@include VP768 {
+
+
+			.#{$prefix}-grid  {
+
+
+
+				/* COl MODIFIER */		
+
+				.-g-shift-vp768 [class^="g-"] {
+			  		float:right;
+				}
+
+				.-g-v-align-768 {
+				
+					// .flexbox & {
+						display: -webkit-box;
+						display: -webkit-flex;
+						display: -ms-flexbox;
+						display:         flex;
+						-ms-flex-align: center;
+						-webkit-align-items: center;
+						-webkit-box-align: center;
+						align-items: center;
+					// }
+
+					// .no-flex & {
+						// translate or old ie solution...
+					// }
+
+				}
+
+				
+			} /* .#{$prefix}-grid END */	
+
+
+			
+		} // VP768 END
+
+
+ 		@include VP1280 {
+			
+			.#{$prefix}-grid  {
+
+				.gc {
+					max-width: 1440px;
+					margin-left: auto;
+					margin-right: auto;
+				}
+
+
+			} /* .#{$prefix}-grid END */	
+
+		} // VP 1280	
+
+ 		@include VP1280 {
+			
+			.#{$prefix}-grid  {
+
+		
+
+
+			} /* .#{$prefix}-grid END */	
+
+		} // VP 1280		
+
+
+
+
+
+// - - - XSMALL / SMALL / MEDIUM / LARGE / XLARGE
+
+	@include XSMALL 	{ .#{$prefix}-grid { @include grid-cols(12, g-xs); } }
+	@include SMALL 		{ .#{$prefix}-grid { @include grid-cols(12, g-s); } }
+	@include MEDIUM  	{ .#{$prefix}-grid { @include grid-cols(12, g-m); } }
+	@include LARGE 		{ .#{$prefix}-grid { @include grid-cols(12, g-l); } }
+
+
+
+
+} // MIXIN grid END
+
+
+
+// COMPILE FULL GRID SYSTEM
+@include grid($prefix, $contentWidth, $columns, $gutter, $min-width);
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// MAKE THE GRID
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// @include grid-rwd   ($prefix, $width, $columns, $gutter, $outer-padding, $behavior, $min-width);
+  // @include g-grid  ($prefix, $width, $columns, $gutter, $outer-padding, fixed, $min-width);
+
+// @include grid-breakpoint($breakpoint, $prefix, $behavior, $width, $gutter, $outer-padding);
+   //@include grid-breakpoint(1441px, $prefix,  fixed, 1176 , 24, 0);
+   //@include grid-breakpoint(1820px, $prefix,  fixed, 1390 , 26, 0);
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Full fluid exampel -  (Leave width in breakpoint default for full fluid)*
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+   // @include grid-rwd   ($name, $prefix, $width, $columns, $gutter, $outer-padding, $behavior, $min-width, $break480, $ie7);
+   // @include grid-breakpoint($media-768, $name, $prefix, $media, fluid, $width , 10, 0);
+   // @include grid-breakpoint($media-480, $name, $prefix, $media, fluid, $width , 10, 0);
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  
+

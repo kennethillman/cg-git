@@ -1,0 +1,34 @@
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* All */ 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//  Import settings
+//  (i) -> Set true to the breakpoints and themes you want to import
+
+	$XSMALL: true;
+	$SMALL:  true;
+	$MEDIUM: true;
+	$LARGE:  true;
+	$XLARGE: true;
+
+	$VP1920: true;
+	$VP1680: true;
+	$VP1440: true;
+	$VP1280: true;
+	$VP1024: true;
+	$VP768:  true;
+	$VP600:  true;
+	$VP480:  true;
+	$VP320:  true;
+
+	@import './src/assets/styles/ui-variables.scss';
+	@import './src/assets/styles/__utils/functions.scss';
+	@import './src/assets/styles/__utils/mixins-breakpoint.scss';
+	@import './src/assets/styles/__utils/mixins.scss';
+
+
+
+
+

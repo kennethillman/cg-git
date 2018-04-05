@@ -1,0 +1,127 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
+// MIXINS - BREAKPOINT/MEDIA/CONTENT
+//
+
+/* MIXINS-BREAKPOINTS */
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Table of contents
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// - VARIABLE SETUP
+// - - - Viewport
+// - - - Breakpoints
+// - - - Theming
+// - - - Extras
+//
+// - CONTENT MIXINS
+// - - - Viewport
+// - - - Theming
+// - - - Extras
+//
+// - INLINE MEDIA MIXIN MAGIC
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// VARIABLE SETUP
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// MQ Viewport
+$at-VP320:                                 false !default;
+$at-VP480:                                 false !default;
+$at-VP600:                                 false !default;
+$at-VP768:                                 false !default;
+$at-VP1024:                                false !default;
+$at-VP1280:                                false !default;
+$at-VP1440:                                false !default;
+$at-VP1680:                                false !default;
+$at-VP1920:                                false !default;
+
+// Only ranges
+$at-MOBILE:                                false !default;
+$at-TABLET:                                false !default;
+$at-DESKTOP:                               false !default;
+
+//Breakpoints
+// Values not set
+$at-bp-480:                                480px !default;
+$at-bp-600:                                600px !default;
+$at-bp-768:                                768px !default;
+$at-bp-1024:                               998px !default;
+$at-bp-1280:                               1280px !default;
+$at-bp-1440:                               1440px !default;
+$at-bp-1680:                               1680px !default;
+$at-bp-1920:                               1920px !default;
+
+
+// Extras
+$at-msie:                                  false !default;
+$at-no-js:                                 false !default;
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// CONTENT MIXINS
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Viewport
+@mixin at-VP320                            { @if $at-VP320                     { @content; } }
+@mixin at-VP480                            { @if $at-VP480                     { @include media-min($at-bp-480)  {@content;} }  }
+@mixin at-VP600                            { @if $at-VP600                     { @include media-min($at-bp-600)  {@content;} }  }
+@mixin at-VP768                            { @if $at-VP768                     { @include media-min($at-bp-768)  {@content;} }  }
+@mixin at-VP1024                           { @if $at-VP1024                    { @include media-min($at-bp-1024) {@content;} }  }
+@mixin at-VP1280                           { @if $at-VP1280                    { @include media-min($at-bp-1280) {@content;} }  }
+@mixin at-VP1440                           { @if $at-VP1440                    { @include media-min($at-bp-1440) {@content;} }  }
+@mixin at-VP1680                           { @if $at-VP1680                    { @include media-min($at-bp-1680) {@content;} }  }
+@mixin at-VP1920                           { @if $at-VP1920                    { @include media-min($at-bp-1920) {@content;} }  }
+
+/// Only ranges
+@mixin at-MOBILE                           { @if $at-MOBILE                    { @include media-only(240px, 599px) {@content;} } }
+@mixin at-TABLET                           { @if $at-TABLET                    { @include media-only(600px, 997px) {@content;} } }
+
+////// Extras
+@mixin at-msie                             { @if $at-msie                      {@content;} }
+@mixin at-no-js                            { @if $at-no-js                     {@content;} }
+
+
+/////////////////////////////////////////////////////////////////////////
+// INLINE MEDIA MIXIN MAGIC
+// -> http://jakearchibald.github.io/sass-ie/
+/////////////////////////////////////////////////////////////////////////
+
+//////// BREAKPOINTS FOR MODULES
+
+$at-fix-mqs: false !default;
+
+@mixin media-min($at-width) {
+    @if $at-fix-mqs {
+        @if $at-fix-mqs >= $at-width {
+            @content;
+        }
+    } @else {
+        @media screen and (min-width: $at-width) {
+            @content;
+        }
+    }
+}
+
+@mixin media-max($at-width) {
+    @if $at-fix-mqs {
+        @if $at-fix-mqs <= $at-width {
+            @content;
+            }
+    } @else {
+        @media screen and (max-width: $at-width) {
+            @content;
+        }
+    }
+}
+
+@mixin media-only($at-minwidth, $at-maxwidth) {
+    @media screen and (min-width: $at-minwidth) and (max-width: $at-maxwidth) {
+        @content;
+    }
+}

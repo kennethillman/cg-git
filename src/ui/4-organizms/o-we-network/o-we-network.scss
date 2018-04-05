@@ -1,0 +1,416 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
+// SECTION
+//  
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Table of contents 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// - VP320
+// - VP480
+// - VP768
+// - VP1024
+// - VP1280  
+// - VP1440
+// - VP1700  
+//
+// - - MS Internet explorer
+// - - NO JavaScript
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+//////// CLASS NAME
+$className: o-we-network;
+
+
+.#{$className}{
+
+////////////////////////////////////////////////////////////////
+// VP320 - MOBILE AND TOUCH FIRST
+////////////////////////////////////////////////////////////////
+
+
+@include VP320 {
+
+
+// - - General
+	
+		text-align: center;
+		padding-top: 180px;
+
+		&.-flex {
+			display: flex;
+			align-items: center;
+			.body{
+				width: 100%;
+			}
+		}
+
+		&.-inverted {
+			color: $white;
+		}
+
+
+
+
+		h1 {
+			font-size: 18px;
+			font-family: $font-b;
+			margin:0 0 20px;
+			font-weight: normal;
+			display: block;
+		}
+
+
+
+		.text-wrapper {
+			margin: 0 auto;
+			max-width: 86%;
+		}
+
+		p {
+			font-family: $font-b;
+			font-size: 20px;
+			line-height: 24px;
+			color: $blue3;
+			&.-small {
+				font-size: 13px;
+			}
+		}
+
+// - - Startpage
+
+		&.-startpage {
+			background: url('/assets/images/illustrationer@2x.png') no-repeat;
+			background-size: cover;
+		}
+
+
+// - - Cases
+
+		&.-case {
+
+			padding-top: 13rem;
+			padding-bottom: 15rem;
+			overflow: hidden;
+			position: relative;
+			background-size: cover;
+
+			h1 {
+				font-size: 48px;
+				line-height: 56px;
+				font-family: $font-b;
+			}
+
+			p {
+				font-family: $font-b;
+				font-size: 28px;
+				line-height: 40px;
+			}
+
+			.btn {
+				margin: 2rem 0; 
+			}
+
+			.tilted {
+				position: absolute;
+				top: 100%;
+				left: 50%;
+				margin-top: -60px;
+				margin-left: -100%;
+				background: $white;
+				transform: rotate(-2deg);
+				height: 200px;
+				width: 200%;
+			}
+
+		}
+
+	// Viasatsport
+
+		&.-viasatsport {
+			background-color: $visatsport;
+			background-image: url('/assets/images/viasport-top-image@2x.png');
+			background-size: 300px;
+			background-position: left 106%;
+			background-repeat: no-repeat;
+
+		}
+
+
+	// SF Kidz play
+
+		&.-case-sfkidzplay {
+			
+		}
+
+
+
+// - - Interaction (States)
+
+/*
+			.touch &{
+			    &:active{
+
+			    }
+			}
+
+			.no-touch &{
+			    &:hover{
+
+			    }
+			    &:active{
+
+			    }
+			}
+
+			&:focus{
+
+			}
+*/
+
+
+
+
+
+
+} // VP320 END
+
+
+
+
+
+////////////////////////////////////////////////////////////////
+// VP480
+////////////////////////////////////////////////////////////////
+
+@include VP480 {
+
+	// - - Cases
+
+		&.-case {
+
+			padding-top: 8rem;
+			padding-bottom: 17rem;
+
+			.btn {
+				position: absolute;
+				bottom: 100px;
+				right: 4vw;
+			}
+
+
+		}
+	
+
+	// Viasatsport
+
+		&.-viasatsport {
+		
+			background-position: left 110%;
+
+		}
+
+
+} // VP480 END
+
+////////////////////////////////////////////////////////////////
+// VP600
+////////////////////////////////////////////////////////////////
+
+@include VP600 {
+
+	&.-case {
+		.btn {
+			bottom: 100px;
+			right: 80px;
+		}
+	}
+
+}
+
+////////////////////////////////////////////////////////////////
+// VP768
+////////////////////////////////////////////////////////////////
+
+@include VP768 {
+
+		padding-top: 60px;
+		min-height: 100vh;
+
+		.text-wrapper {
+			max-width: 70%;
+		}	
+
+
+		&.-case {
+
+			padding-top: 8rem;
+			padding-bottom: 0rem;
+
+
+			h1 {
+				font-size: 68px;
+				line-height: 80px;
+			}
+
+
+			.btn {
+				bottom: 130px;
+			}
+
+			.tilted {
+				position: absolute;
+				top: 100%;
+				left: 50%;
+				margin-top: -60px;
+				margin-left: -100%;
+				transform: rotate(-2deg);
+			}
+
+		}
+
+	// Viasatsport
+
+		&.-viasatsport {
+			background-size: 60%;
+			background-position: left 126%;
+			background-repeat: no-repeat;
+		}
+
+
+} // VP768 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1024
+////////////////////////////////////////////////////////////////
+
+@include VP1024{
+	
+	// Viasatsport
+
+		&.-viasatsport {
+			background-size: 50%;
+			background-position: left 120%;
+			background-repeat: no-repeat;
+		}
+		
+} // VP1024 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1280 
+////////////////////////////////////////////////////////////////
+
+@include VP1280 {
+	
+		h1 {
+			font-size: 20px;
+		}
+
+		p {
+			font-family: $font-a;
+			font-size: 36px;
+			line-height: 48px;
+		}
+
+
+	// Case
+
+		&.-case {
+			.btn {
+				position: absolute;
+				bottom: 150px;
+				right: 80px;
+			}
+		}
+
+	// Viasatsport
+
+		&.-viasatsport {
+			background-size: 600px;
+			background-position: left 144%;
+			background-repeat: no-repeat;
+		}
+
+	
+} // VP1280 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1680
+////////////////////////////////////////////////////////////////
+
+@include VP1680 {
+	
+	
+
+	
+} // VP1680 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1680
+////////////////////////////////////////////////////////////////
+
+@include VP1920 {
+	
+	
+
+	
+} // VP1920 END
+
+
+////////////////////////////////////////////////////////////////
+// MSIE - INTERNET EXPLORER
+////////////////////////////////////////////////////////////////
+
+@include msie {
+		
+	.ie-8 &{
+		
+	}
+
+	.msie-9 &{
+		
+	}
+
+} // msie END
+
+
+////////////////////////////////////////////////////////////////
+// NO-JAVASCRIPT
+////////////////////////////////////////////////////////////////
+
+@include no-js {
+	
+	.no-js &{
+		
+	}
+
+} // no-js END
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+////// END
+
+} // END
+
+
+
+
+
+
+
+
+
+
+
+
+
+

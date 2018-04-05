@@ -1,0 +1,337 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
+// SECTION
+//  
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Table of contents 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// - VP320
+// - VP480
+// - VP768
+// - VP1024
+// - VP1280  
+// - VP1440
+// - VP1700  
+//
+// - - MS Internet explorer
+// - - NO JavaScript
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+//////// CLASS NAME
+$className: o-case-latest;
+
+
+.#{$className}{
+
+////////////////////////////////////////////////////////////////
+// VP320 - MOBILE AND TOUCH FIRST
+////////////////////////////////////////////////////////////////
+
+
+@include VP320 {
+
+.video-background {
+  background: #000;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+h3 a {
+	text-decoration: none;
+}
+
+
+.overlay {
+	width: 100%; 
+	height: 102%;
+	position: absolute;
+	top: 0;
+	mix-blend-mode:multiply;
+	z-index: 2;
+}
+
+
+.video-bg {
+     position: absolute;
+    left: 0;
+    /* margin: 0 0 0 -50vw; */
+    width: 100%;
+    height: 100%;
+    r-events: none;
+    z-index: 0;
+    overflow: hidden;
+    top: 0;
+  video {
+  	width: 100%;
+  }
+}
+
+
+.video-bg iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+
+// - - General
+		min-height: 100vh;
+		// background: #f2fafe;
+		position: relative;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		
+		.bg {
+			background: url(http://www.ljudochbild.se/wp-content/uploads/sf-kids-menu.png) 50%;
+			background-size: cover;
+			background-attachment: fixed;
+			position: relative;
+		    width: 101%;
+		    height: 101%;
+		    margin: .5em 0;
+		    //overflow: hidden;
+		}
+
+		.body {
+			position: relative;
+			z-index: 1;
+		}
+
+		.label {
+			font-family: $font-a;
+			font-size: 32px;
+			line-height: 1;
+		}
+
+		h3 {
+			background-color: white;
+			mix-blend-mode: screen; 
+			font-family: $font-d;
+			font-size: 44px;
+			margin: 0;
+			font-weight: bold;
+			color: #000;
+			position: relative;
+			z-index: 1;
+			width: 100%; 
+			height: 101%;
+		}
+
+		.body {
+			width: 100%;
+		}
+
+
+		.text-wrapper {
+			p {
+				font-size: 20px;
+				line-height: 28px;
+				max-width: 80vw;
+			    margin-left: auto;
+			    margin-right: auto;
+			    max-width: 600px;
+			}
+		}
+
+
+// - - Interaction (States)
+
+/*
+			.touch &{
+			    &:active{
+
+			    }
+			}
+
+			.no-touch &{
+			    &:hover{
+
+			    }
+			    &:active{
+
+			    }
+			}
+
+			&:focus{
+
+			}
+*/
+
+
+
+
+
+
+} // VP320 END
+
+
+
+
+
+////////////////////////////////////////////////////////////////
+// VP480
+////////////////////////////////////////////////////////////////
+
+@include VP480 {
+	
+	h3 {
+		font-size: 110px;
+    	letter-spacing: -2px;
+	}
+
+
+} // VP480 END
+
+////////////////////////////////////////////////////////////////
+// VP600
+////////////////////////////////////////////////////////////////
+
+@include VP600 {
+
+	h3 {
+		font-size: 130px;
+    	letter-spacing: -3px;
+	}
+	
+} // VP600 END
+
+////////////////////////////////////////////////////////////////
+// VP768
+////////////////////////////////////////////////////////////////
+
+@include VP768 {
+
+	h3 {
+		font-size: 170px;
+    	letter-spacing: -5px;
+	}
+	
+} // VP768 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1024
+////////////////////////////////////////////////////////////////
+
+@include VP1024{
+	
+	h3 {
+		font-size: 200px;
+		letter-spacing: -6px
+	}
+
+	.text-wrapper {
+		p {
+
+			max-width: 60vw;
+		}
+	}
+		
+} // VP1024 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1280 
+////////////////////////////////////////////////////////////////
+
+@include VP1280 {
+	
+
+	
+} // VP1280 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1680
+////////////////////////////////////////////////////////////////
+
+@include VP1680 {
+	
+	
+
+	
+} // VP1680 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1680
+////////////////////////////////////////////////////////////////
+
+@include VP1920 {
+	
+	
+
+	
+} // VP1920 END
+
+
+////////////////////////////////////////////////////////////////
+// MSIE - INTERNET EXPLORER
+////////////////////////////////////////////////////////////////
+
+@include msie {
+		
+	.ie-8 &{
+		
+	}
+
+	.msie-9 &{
+		
+	}
+
+} // msie END
+
+
+////////////////////////////////////////////////////////////////
+// NO-JAVASCRIPT
+////////////////////////////////////////////////////////////////
+
+@include no-js {
+	
+	.no-js &{
+		
+	}
+
+} // no-js END
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+////// END
+
+} // END
+
+
+
+
+
+
+
+
+
+
+
+
+
+

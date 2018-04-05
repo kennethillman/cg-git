@@ -1,0 +1,1 @@
+var UI = window.UI || {}; UI.activetalents = UI.activetalents || {}; UI.commonground = UI.commonground || {}; UI.bond = UI.bond || {}; UI.atoms = UI.atoms || {}; UI.molecules = UI.molecules || {}; UI.organizms = UI.organizms || {}; UI.templates = UI.templates || {}; UI.pages = UI.pages || {}; 

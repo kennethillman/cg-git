@@ -1,0 +1,396 @@
+
+//
+// C-PLACEHOLDER
+//
+
+//////////////////////////////////////////////////////
+// - Table of contents
+//////////////////////////////////////////////////////
+//
+// - VP320
+//
+//////////////////////////////////////////////////////
+
+//////// CLASS NAME
+$className: m-teaser;
+
+
+a.#{$className} {
+
+	@include VP320 {
+
+		&:hover {
+			.body {
+				z-index: 1;
+				background: rgba(0,0,0,.55);
+				opacity: 1;
+			}
+
+
+			.text {
+				@include transform(translateY(0px));
+			}
+			figure {
+				opacity: 1;
+				//@include transform(translateY(0px));
+			}
+		}
+
+	}
+}
+
+
+
+.#{$className} {
+
+//////////////////////////////////////////////////////
+// VP320 - MOBILE AND TOUCH FIRST
+//////////////////////////////////////////////////////
+
+
+	@include VP320 {
+
+		position: relative;
+		display: block;
+		text-align: center;
+		background: $grey;
+		overflow: hidden;
+		height:auto;
+		background-size: cover;
+		@include aspect-ratio-img(4,3);
+
+
+	// - - Children
+
+		div {
+			text-align: center;
+			margin: 0;
+			padding: 0;
+			font-family: $font-a;
+		}
+
+		.header {
+			text-transform: uppercase;
+			color: rgba(0,0,0,.36);
+			font-size: 20px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			margin:0;
+		}
+
+		img {
+			width:100%;
+			height: auto;
+		}
+
+
+		.body {
+			z-index: -1;
+			display: block;
+			font-size: 20px;
+			color: $white;
+			position: absolute;
+			top:0;
+			left:0;
+			height: 100%;
+			width: 100%;
+			font-family: $font-b;
+			text-align: left;
+			background: rgba(0,0,0,0);
+			opacity: 0;
+			@include transition(all  .375s ease-out);
+		}
+
+		.content{
+			position: absolute;
+			bottom:0;
+			left:0;
+			width: 100%;
+			height: 100%;		
+		}
+
+		.text {
+			padding: 0 25px 25px;
+			@include transform(translateY(20px));
+			@include transition(all .375s ease-out);
+
+			b {
+				display: block;
+				padding-bottom: 6px; 
+			}
+		
+		}
+
+
+
+
+	// - - BG
+
+		&.-viasatsport {
+			background-image:url(/assets/images/casebild-viasport.jpg);
+		}
+
+		/* @2x Images (Pixel Ratio of 1.25+) */
+		@media only screen and (-o-min-device-pixel-ratio: 5/4),
+		       only screen and (-webkit-min-device-pixel-ratio: 1.25),
+		       only screen and (min-device-pixel-ratio: 1.25),
+		       only screen and (min-resolution: 1.25dppx) {
+		    &.-viasatsport {background-image:url(/assets/images/casebild-viasport@2x.jpg);}
+		}
+
+		/* @3x Images (Pixel Ratio of 2.25+) */
+		@media only screen and (-o-min-device-pixel-ratio: 9/4),
+		       only screen and (-webkit-min-device-pixel-ratio: 2.25),
+		       only screen and (min-device-pixel-ratio: 2.25),
+		       only screen and (min-resolution: 2.25dppx) {
+		    &.-viasatsport {background-image:url(/assets/images/casebild-viasport@3x.jpg);}
+		}
+
+		&.-lf {
+			background-image:url(/assets/images/casebild-lf.jpg);
+		}
+
+		/* @2x Images (Pixel Ratio of 1.25+) */
+		@media only screen and (-o-min-device-pixel-ratio: 5/4),
+		       only screen and (-webkit-min-device-pixel-ratio: 1.25),
+		       only screen and (min-device-pixel-ratio: 1.25),
+		       only screen and (min-resolution: 1.25dppx) {
+		    &.-lf {background-image:url(/assets/images/casebild-lf@2x.jpg);}
+		}
+
+		/* @3x Images (Pixel Ratio of 2.25+) */
+		@media only screen and (-o-min-device-pixel-ratio: 9/4),
+		       only screen and (-webkit-min-device-pixel-ratio: 2.25),
+		       only screen and (min-device-pixel-ratio: 2.25),
+		       only screen and (min-resolution: 2.25dppx) {
+		    &.-lf {background-image:url(/assets/images/casebild-lf@3x.jpg);}
+		}
+
+		&.-vattenfall {
+			background-image:url(/assets/images/casebild-incharge.jpg);
+		}
+
+		/* @2x Images (Pixel Ratio of 1.25+) */
+		@media only screen and (-o-min-device-pixel-ratio: 5/4),
+		       only screen and (-webkit-min-device-pixel-ratio: 1.25),
+		       only screen and (min-device-pixel-ratio: 1.25),
+		       only screen and (min-resolution: 1.25dppx) {
+		    &.-vattenfall {background-image:url(/assets/images/casebild-incharge@2x.jpg);}
+		}
+
+		/* @3x Images (Pixel Ratio of 2.25+) */
+		@media only screen and (-o-min-device-pixel-ratio: 9/4),
+		       only screen and (-webkit-min-device-pixel-ratio: 2.25),
+		       only screen and (min-device-pixel-ratio: 2.25),
+		       only screen and (min-resolution: 2.25dppx) {
+		    &.-vattenfall {background-image:url(/assets/images/casebild-incharge@3x.jpg);}
+		}
+
+		&.-sf-kids {
+			background-image:url(/assets/images/casebild-sf-kids.png);
+		}
+
+		/* @2x Images (Pixel Ratio of 1.25+) */
+		@media only screen and (-o-min-device-pixel-ratio: 5/4),
+		       only screen and (-webkit-min-device-pixel-ratio: 1.25),
+		       only screen and (min-device-pixel-ratio: 1.25),
+		       only screen and (min-resolution: 1.25dppx) {
+		    &.-sf-kids {background-image:url(/assets/images/casebild-sf-kids@2x.png);}
+		}
+
+		/* @3x Images (Pixel Ratio of 2.25+) */
+		@media only screen and (-o-min-device-pixel-ratio: 9/4),
+		       only screen and (-webkit-min-device-pixel-ratio: 2.25),
+		       only screen and (min-device-pixel-ratio: 2.25),
+		       only screen and (min-resolution: 2.25dppx) {
+		    &.-sf-kids {background-image:url(/assets/images/casebild-sf-kids@3x.png);}
+		}
+
+	// - - Modifiers
+
+		// Icon
+
+		&.-icon {
+			position: relative;
+
+			figure {
+				margin: 0;
+				display: inline-block;
+				opacity: 0;
+				width:50%;
+				max-height: 3.5rem;
+				//@include transform(translateY(50px));
+				@include transition(all  .375s ease-out );
+				position: absolute;
+				top:50%;
+				left:50%;
+				@include transform(translate(-50%, -50%));
+			}
+
+			svg {
+				
+				fill: $white;
+				height: 3.5rem;
+				width: 100%;
+				
+			}
+		}
+
+		// Size
+
+		&.-grid {
+			position: relative;
+			height: 0;
+			padding: 0;
+			background: rgba(0, 0, 0, 0);
+
+			&:before {
+				content: "";
+				width: 100%;
+				height: 1000rem;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: rgba(153, 204, 153, .1);
+			}
+
+			&.-odd {
+				&:before {
+					background: rgba(153, 204, 153, .2);
+				}
+			}
+
+		}
+
+		&.-content {
+			height: auto;
+			@include aspect-ratio-img(1, 2);
+		}
+
+		&.-mini {
+			height: auto;
+			padding: 1.5rem 0;
+			font-size: .75rem;
+		}
+
+		&.-diff {
+			background: $grey2;
+		}
+
+		&.-puff {
+			height: auto;
+			@include aspect-ratio-img(2.35, 1);
+		}
+
+		&.-ratio-2_35-1 {
+			height: auto;
+			@include aspect-ratio-img(2.35, 1);
+		}
+
+		&.-ratio-16-9 {
+			height: auto;
+			@include aspect-ratio-img(16, 9);
+		}
+
+		&.-ratio-1-1 {
+			height: auto;
+			@include aspect-ratio-img(1, 1);
+		}
+
+		&.-ratio-1-2 {
+			height: auto;
+			@include aspect-ratio-img(1, 2);
+		}
+
+		&.-ratio-1-3 {
+			height: auto;
+			@include aspect-ratio-img(1, 3);
+		}
+
+		&.-text-large {
+			.text {
+				font-size: 30px;
+			}
+		}
+
+		&.-text-small {
+			.text {
+				font-size: 14px;
+			}
+		}
+
+		// Color
+		&.-ad {
+			background: $link;
+		}
+
+
+
+		// Color
+		&.-grey {
+			background-color: $grey;
+
+		}
+
+		&.-blue1 {
+			background-color: $blue1;
+
+		}
+
+		&.-blue2 {
+			background-color: $blue2;
+		
+		}
+
+		&.-blue3 {
+			background-color: $blue3;
+
+		}
+
+		&.-green {
+			background-color: $green;
+		
+		}
+
+		&.-yellow {
+			background-color: $yellow;
+
+		}
+
+		&.-pink {
+			background-color: $pink;
+
+		}
+		&.-pinklight {
+			background-color: $pinklight;
+
+		}
+
+		
+
+
+
+	} // VP320 END
+
+
+
+//////////////////////////////////////////////////////
+////// END
+
+} // END
+
+
+
+
+
+
+
+
+
+
+
+
+
+

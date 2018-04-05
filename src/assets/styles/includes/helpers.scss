@@ -1,0 +1,29 @@
+
+//
+// HELPERS
+//
+
+////////////////////////////////////////////////////////////////
+// VP320
+////////////////////////////////////////////////////////////////
+
+@include VP320 {
+
+	// Variable ui-color helper css classes 
+	// (i) -> BACKGROUND-COLOR, TEXT-COLOR & SVG-FILL
+
+	@each $ui-color in $ui-colors {
+		/* @debug '$ui-color 1 -> ' nth($ui-color, 1); */
+		.-bg-#{nth($ui-color, 1)} {background-color: nth($ui-color, 2)!important;}
+		.-txt-#{nth($ui-color, 1)} {color: nth($ui-color, 2)!important;}			
+		.-fill-#{nth($ui-color, 1)} {fill: nth($ui-color, 2)!important;}	
+	}
+
+}
+
+@include XSMALL {
+	body .-hide-xsmall {
+		display: none;
+	}
+}
+

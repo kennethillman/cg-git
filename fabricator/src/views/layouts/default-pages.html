@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="" class="no-touch no-js">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Common Ground is a UX design studio based in Stockholm, Sweden.  The Common Ground toolbox holds research, strategy, design, user testing, prototyping and visual design.">
+
+    <title>Common Ground - UX Design Studio</title>
+
+	<style>
+
+	/* - - Inline Critical CSS (custom + generated "gulp-penthouse" ) - - */
+		 /* Handelbars.js - Partial */
+		 /* Uniqe for each page type */
+    	 /* > UI.aboutCritical }} ??? */
+
+ 
+	</style>
+
+
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+
+	<!-- Temp link -->
+
+		<link rel="styleSheet" href="/assets/styles/ui-styles.css">
+		<link rel="styleSheet" href="/assets/at/styles/at.css">
+
+		{{#if fabricator}}<link rel="stylesheet" href="../assets/fabricator/styles/f.css">{{/if}}
+	
+	<script>
+		
+	  	/* - - Inline Preset paths - - */
+	    {{> UI.inlinePreset }}
+
+	  	/* - - Inline Async loader - - */
+	    {{> UI.inlineToast }}	
+
+		/* - - Inline JS generated taxonomy scopes - - */
+	    {{> UI.inlineGeneratedJsScope }}	 
+
+	  	/* - - Inline Critical JS - - */
+	    {{> UI.inlineHead }}
+
+	</script>
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-74774637-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <meta name="google-site-verification" content="LEFWK2OGMokmuVt2Z6-bKTwW_0ubpniYJR5tp8N9t4w" />
+        <!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KFBBL4P');</script><!-- End Google Tag Manager -->
+
+
+</head>
+	<body class="{{class-body}} -at-show-header -at-scroll--top" >
+
+	<script>
+	  // UI.initial.loadGoogleFONTS();
+	  UI.initial.loadSvgSprites(UI_PRESET.path.svg.icons,'SVG Ikoner');
+	  // UI.initial.loadSvgSprites(UI_PRESET.path.svg.graphics, 'SVG Grafik');
+	</script>
+
+	
+	<div class="bg-fade">
+		{% body %}
+	</div>
+
+
+	<script>
+	    {{> UI.inlineFooter }}	
+	</script> 
+
+	    <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFBBL4P" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+</body>
+</html>
+

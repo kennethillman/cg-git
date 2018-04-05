@@ -1,0 +1,147 @@
+---
+class-preview: -startpage
+notes: |
+
+  Description and docs
+
+---
+
+
+<section class="o-hero {{class}}" data-inview-bg="#fff">
+    <div class="body">
+	    <div class="gc">
+			<div class="text-wrapper">
+
+		<!-- STARTPAGE -->
+
+			 {{#if startpage}}
+				<h1>We are Common Ground</h1>
+				<p>We are a digital design studio that create useful and engaging services that millions of people use every day. Our clients range from <b>startups</b> to <b>banks</b> - from local to international. With experience and curious minds, we create solutions that looks great, works seamlessly and drive business value for our clients.
+				</p>
+			{{/if}}
+
+		<!-- ABOUT -->
+
+			{{#if about}}
+				<p>
+					For us, all parts can make or break a great user experience. We prefer to be a part of the whole process, working closely with the client, developers and end users. We believe all steps, from user research to development, are equally important to create something that matters to people. 
+				</p>
+			{{/if}}
+
+		<!-- CASE - VISATSPORT -->
+
+			{{#if viasatsport}}
+				<h1>Viasatsport</h1>
+				<p>Designing a world class sports product. Made for fans who wants a quick recap of their favorite events as well as the ones who wants to dig deep into stories and statistics.
+				</p>
+				<a class="-medium" href="https://medium.com/common-ground/viasport-the-creation-of-a-sports-product-f210c3dee6c6" target="_blank">Read the full article on Medium</a><br>
+				<a href="https://www.viasatsport.se/" target="_blank" class="btn -ghost -rounded-sides">Visit the site</a>
+				<div class="tilted"></div>
+			{{/if}}
+
+		<!-- CASE - SF KIDS PLAY -->
+
+			{{#if sfkidsplay}}
+				<h1>SF Kids Play</h1>
+				<p>Designing a world class sports product. Made for fans who wants a quick recap of their favorite events as well as the ones who wants to dig deep into stories and statistics.
+				</p>
+			
+			{{/if}}
+
+		<!-- CASE - LÄNSFÖRSÄKRINGAR -->
+
+			{{#if lf}}
+				<h1>Länsförsäkringar, My Pages</h1>
+				<p>Redesign of the logged in experience for Länsförsäkringar, one of Sweden’s largest companies in insurance, banking and pension.
+				</p>
+				<a class="-medium" href="https://medium.com/common-ground/at-the-heart-of-things-the-role-of-design-cedd745f7e11" target="_blank">Read the full article on Medium</a><br>
+				
+				
+			{{/if}}
+
+		<!-- CASE - VATTENFALL -->
+
+			{{#if vattenfall}}
+				<h1>Enabler of electric cars</h1>
+				<p>Building a new brand together with Vattenfall. Incharge is a new cooperative brand and is already one of the largest networks of charging stations in northern europe.
+				</p>
+				<!-- <a href="/" target="_blank">Read the full article on Medium</a><br> -->
+			{{/if}}
+
+			</div>    	
+	    </div>
+
+
+
+
+
+
+		<!-- CASE - LÄNSFÖRSÄKRINGAR -->
+
+		{{#if lf}}
+			<figure class="hand">
+				<img src="/assets/images/lf/hand-phone.png" 
+				srcset="/assets/images/lf/hand-phone.png 1x, 
+				/assets/images/lf/hand-phone@2x.png 2x,
+				/assets/images/lf/hand-phone@3x.png 3x">
+			</figure>
+			<a href="https://www.lansforsakringar.se/stockholm/privat/" target="_blank" class="btn -ghost -rounded-sides">Visit the site</a>
+			<div class="tilted"></div>
+		{{/if}}
+
+
+		<!-- CASE - SF KIDS PLAY -->
+
+		{{#if sfkidsplay}}
+			<!-- <figure class="toon yellow-bg">
+				<img src="/assets/images/sfkidsplay/gul-bg.png" 
+				srcset="/assets/images/sfkidsplay/gul-bg.png 1x, 
+				/assets/images/sfkidsplay/gul-bg@2x.png 2x,
+				/assets/images/sfkidsplay/gul-bg@3x.png 3x">
+			</figure> -->
+			<figure class="toon yellow">
+				<img src="/assets/images/sfkidsplay/gul-gubbe.png" 
+				srcset="/assets/images/sfkidsplay/gul-gubbe.png 1x, 
+				/assets/images/sfkidsplay/gul-gubbe@2x.png 2x,
+				/assets/images/sfkidsplay/gul-gubbe@3x.png 3x">
+			</figure>
+			<figure class="toon green">
+				<img src="/assets/images/sfkidsplay/gr-n-gubbe.png" 
+				srcset="/assets/images/sfkidsplay/gr-n-gubbe.png 1x, 
+				/assets/images/sfkidsplay/gr-n-gubbe@2x.png 2x,
+				/assets/images/sfkidsplay/gr-n-gubbe@3x.png 3x">
+			</figure>
+			<figure class="toon blue">
+				<img src="/assets/images/sfkidsplay/bl-gubbe.png" 
+				srcset="/assets/images/sfkidsplay/bl-gubbe.png 1x, 
+				/assets/images/sfkidsplay/bl-gubbe@2x.png 2x,
+				/assets/images/sfkidsplay/bl-gubbe@3x.png 3x">
+			</figure>
+			<figure class="toon purple">
+				<img src="/assets/images/sfkidsplay/lila-gubbe.png" 
+				srcset="/assets/images/sfkidsplay/lila-gubbe.png 1x, 
+				/assets/images/sfkidsplay/lila-gubbe@2x.png 2x,
+				/assets/images/sfkidsplay/lila-gubbe@3x.png 3x">
+			</figure>
+				<a class="-medium" href="https://medium.com/common-ground/modern-tv-for-kids-how-we-designed-it-443ce9506c60" target="_blank">Read the full article on Medium</a><br>
+				<!-- <a href="/" target="_blank" class="btn -ghost -rounded-sides">Visit the site</a>-->
+				<div class="tilted"></div>
+		{{/if}}
+
+    </div>
+
+		<!-- CASE - VATTENFALL -->
+
+		{{#if vattenfall}}
+				<div class="video-bg">
+					<video class="b-video--player" muted autoplay loop poster="/assets/images/vattenfall/road-bridge.jpg">
+                        <source src="/assets/video/incharge_720p-1.m4v">
+                    </video>
+			    </div>
+			    <a href="https://www.beincharge.se/" target="_blank" class="btn -ghost -rounded-sides">Visit the site</a>
+			    <div class="tilted"></div>
+		{{/if}}
+
+</section>
+
+

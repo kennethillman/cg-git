@@ -1,0 +1,304 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
+// SECTION
+//  
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Table of contents 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// - VP320
+// - VP480
+// - VP768
+// - VP1024
+// - VP1280  
+// - VP1440
+// - VP1700  
+//
+// - - MS Internet explorer
+// - - NO JavaScript
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+//////// CLASS NAME
+$className: o-content;
+
+
+.#{$className}{
+
+////////////////////////////////////////////////////////////////
+// VP320 - MOBILE AND TOUCH FIRST
+////////////////////////////////////////////////////////////////
+
+
+@include VP320 {
+
+
+	a {
+		&.-medium {
+			display: inline-block;
+			font-family: $font-b;
+			margin: 30px 0 10px;
+		}
+	}
+	
+
+// - - Preamble
+
+	.content-premable {
+		font-family: $font-b;
+		font-size: 22px;
+		line-height: 32px;
+		text-align: center;
+		padding-bottom: 50px;
+	}
+
+// - - Label
+
+	.label {
+		text-align: center;
+		font-family: $font-a;
+		font-size: 32px;
+		line-height: 1;
+		padding-bottom: 50px;
+
+		&.-big {
+			font-size: 48px;
+		}
+	}
+
+// - - Text
+
+	.-text-center {
+		text-align: center;
+	}
+
+	
+
+	&.-content-text {
+		padding-bottom: 50px;
+		font-family: $font-e;
+		font-size: 22px;
+		line-height: 32px;
+	}	
+
+
+// - - Inverted
+
+	&.-inverted {
+		.case-viasatsport & {
+			background: $visatsport;
+		}
+		.case-vattenfall & {
+			background: #092346;
+		}
+	}
+
+	.-content-col {
+		padding-bottom: 25px;
+	}
+
+
+// - - Images
+
+	&.-content-image {
+		padding-bottom: 50px;
+
+		&.-full-width {
+			max-width: 1440px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	.-image-full-screen {
+		position: relative;
+		img {
+			width: 100vw;
+			position: relative;
+			left:50%;
+			margin-left: -50vw;
+		}
+	}
+
+	// Image desc
+
+	figure {
+		.desc {
+			font-family: $font-b;
+			font-size: 16px;
+			line-height: 1.5;
+			text-align: center;
+			color: #707274;
+			margin: 8px auto 0;
+		}
+	}
+
+
+// - - Margins & Paddings
+
+	&.-mt-big {
+		margin-top: 50px;
+	}
+	&.-mb-big {
+		margin-bottom: 50px;
+	}
+	&.-m-big {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+
+	&.-pt-x-big {
+		padding-top: 100px;
+	}
+	&.-pt-big {
+		padding-top: 50px;
+	}
+	&.-pb-x-big {
+		padding-bottom: 100px;
+	}
+	&.-pb-big {
+		padding-bottom: 50px;
+	}
+	&.-p-big {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	.info {
+
+		figure {
+		
+			max-width: 300px;
+			margin: 30px auto 0;
+
+		}
+		svg {
+			width: 100%;
+			height: auto;
+		}
+		p {
+			text-align: center;
+			font-size: 22px;
+			max-width: 280px;
+			margin: 0 auto 40px;
+
+		}
+	}
+
+
+} // VP320 END
+
+
+
+
+
+////////////////////////////////////////////////////////////////
+// VP480
+////////////////////////////////////////////////////////////////
+
+@include VP480 {
+	
+	   
+
+
+} // VP480 END
+
+
+////////////////////////////////////////////////////////////////
+// VP768
+////////////////////////////////////////////////////////////////
+
+@include VP768 {
+
+	
+	
+} // VP768 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1024
+////////////////////////////////////////////////////////////////
+
+@include VP1024{
+	
+	.-image-full-content {
+		margin: 25px 0;
+		width: 200%;
+    	margin-left: -50%;
+		position: relative;
+	}
+
+
+	// Image desc
+
+	figure {
+		.desc {
+			max-width: 65vw
+		}
+	}
+
+		
+} // VP1024 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1280 
+////////////////////////////////////////////////////////////////
+
+@include VP1280 {
+	
+
+
+	
+} // VP1280 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1680
+////////////////////////////////////////////////////////////////
+
+@include VP1680 {
+	
+	
+
+	
+} // VP1680 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1680
+////////////////////////////////////////////////////////////////
+
+@include VP1920 {
+	
+	
+
+	
+} // VP1920 END
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+////// END
+
+} // END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
