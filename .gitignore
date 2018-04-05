@@ -17,10 +17,10 @@ bower_components
 
 # Dependency directories
 node_modules/
-libs/
 dev/
 dist/
 fabricator/dist
+fabricator/fab-dist
 
 # Optional eslint cache
 .eslintcache
