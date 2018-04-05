@@ -45,7 +45,7 @@ const styleOutput = function() {
         .pipe(sourcemaps.init())
         .pipe(gulpif(!config.lint, using()))
         .pipe(sass({ outputStyle: 'compact' }))
-        .pipe(concat('ui-styles-2.css'))
+        .pipe(concat('ui-styles.css'))
         .pipe(gulpif(config.prod, cssnano()))
         .pipe(gulpif(config.prod, rename({ suffix: '.min' })))
         .pipe(gulpif(config.prod, sourcemaps.write('.'), sourcemaps.write()))
@@ -53,7 +53,7 @@ const styleOutput = function() {
         .pipe(gulpif(!config.prod, gulp.dest(path.join(config.styles.dev, 'assets/styles')), gulp.dest(path.join(config.styles.dist, 'assets/styles'))));
 };  
 
-gulp.task('ui-styles-2', () => styleOutput());
+gulp.task('ui-styles', () => styleOutput());
 
 
 const styleCrtitcalOutput = function() {
@@ -69,7 +69,7 @@ const styleCrtitcalOutput = function() {
 };
 
 
-gulp.task('ui-styles-2-critical', () => styleCrtitcalOutput());
+gulp.task('ui-styles-critical', () => styleCrtitcalOutput());
 
 
 /*
@@ -89,7 +89,7 @@ const styleCrtitcalOutput = function(env) {
 
 const styleCriticalPenthouse = function() {
 
-    let cssSrc = `assets/styles/ui-styles-2.css`;   
+    let cssSrc = `assets/styles/ui-styles.css`;   
     let pageUrl = `http://localhost:3000/6-pages/startpage.html`;
     let pageCssOut = `cg-critical-generated.css`;   
 

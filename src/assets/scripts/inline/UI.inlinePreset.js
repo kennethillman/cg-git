@@ -15,7 +15,7 @@
 	            graphics: '',
 	          },
 	          styles: {
-	          		ui: '/assets/styles/ui-styles-2.css',
+	          		ui: '/assets/styles/ui-styles.css',
 	          		at: '/assets/at/styles/at.css',
 	          		print: '',
 	          }, 				
