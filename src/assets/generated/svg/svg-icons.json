@@ -3,10 +3,6 @@
         "width":  "38px",
         "height": "19px"
     },
-    "arrow-down_(kopia)": {
-        "width":  "38px",
-        "height": "19px"
-    },
     "arrow-left": {
         "width":  "24px",
         "height": "24px"
@@ -43,9 +39,21 @@
         "width":  "173px",
         "height": "36px"
     },
+    "logo-blocket": {
+        "width":  "169px",
+        "height": "38px"
+    },
+    "logo-boxer": {
+        "width":  "167px",
+        "height": "29px"
+    },
     "logo-comviq": {
-        "width":  "120px",
-        "height": "28px"
+        "width":  "175px",
+        "height": "42px"
+    },
+    "logo-epidemic": {
+        "width":  "155px",
+        "height": "76px"
     },
     "logo-lf": {
         "width":  "247px",
@@ -54,6 +62,10 @@
     "logo-moo": {
         "width":  "196px",
         "height": "49px"
+    },
+    "logo-nok": {
+        "width":  "130px",
+        "height": "68px"
     },
     "logo-ori": {
         "width":  "207px",

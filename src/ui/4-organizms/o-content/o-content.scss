@@ -45,6 +45,18 @@ $className: o-content;
 			margin: 30px 0 10px;
 		}
 	}
+
+
+// - - Iframe
+
+	.iframe-wrapper {
+		@include vimeo(640,481)
+	}
+
+	iframe {
+		width: 100%;
+		height: auto;
+	}
 	
 
 // - - Preamble

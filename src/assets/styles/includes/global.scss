@@ -9,7 +9,23 @@
 
 @include VP320 {
 
+	body {
+		color: $black;	
 
+		&.page-startpage,
+		&.page-about,
+		&.page-cases{
+			background: #FFFBFB;
+		}
+
+	}
+
+	.case-content {
+		background: #fff;
+	}
+
+
+	
 	.test-inverted {
 		height:100px;
 		width: 100px;
