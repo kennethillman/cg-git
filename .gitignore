@@ -20,7 +20,7 @@ node_modules/
 dev/
 dist/
 fabricator/dist
-fabricator/fab-dist
+fabricator/dist-ftp
 
 # Optional eslint cache
 .eslintcache
