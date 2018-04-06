@@ -32,7 +32,8 @@ gulp.task('fab-dist:html', function () {
 gulp.task('fab-dist:css-js', function () {
     return gulp.src('./fabricator/dist/**/*.{css,js}')
         .pipe(replace('/assets/', '/cg-assets/'))
-    	.pipe(gulp.dest('./fabricator/dist-ftp/'));
+        .pipe(flatten({ includeParents: -1} ))
+    	.pipe(gulp.dest('./fabricator/dist-ftp/cg-assets/'));
 });
 
 gulp.task('fab-dist:copy-assets', function () {
@@ -44,5 +45,5 @@ gulp.task('fab-dist:copy-assets', function () {
 gulp.task('fab-dist:clean', (cb) => del('./fabricator/dist-ftp/', cb));
 
 
-gulp.task('fab-dist', ['fab-dist:html','fab-dist:css-js', 'fab-dist:copy-assets']);
+gulp.task('ftp', ['fab-dist:html','fab-dist:css-js', 'fab-dist:copy-assets']);
 
