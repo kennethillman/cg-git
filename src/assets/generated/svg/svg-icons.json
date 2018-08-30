@@ -36,68 +36,52 @@
         "height": "313px"
     },
     "logo-abs": {
-        "width":  "173px",
-        "height": "36px"
+        "width":  "300px",
+        "height": "124px"
     },
     "logo-blocket": {
-        "width":  "169px",
-        "height": "38px"
+        "width":  "300px",
+        "height": "124px"
     },
-    "logo-boxer": {
-        "width":  "167px",
-        "height": "29px"
+    "logo-cmhm": {
+        "width":  "300px",
+        "height": "124px"
     },
     "logo-comviq": {
-        "width":  "175px",
-        "height": "42px"
+        "width":  "300px",
+        "height": "124px"
     },
     "logo-epidemic": {
-        "width":  "155px",
-        "height": "76px"
+        "width":  "300px",
+        "height": "124px"
     },
     "logo-lf": {
-        "width":  "247px",
-        "height": "49px"
-    },
-    "logo-moo": {
-        "width":  "196px",
-        "height": "49px"
+        "width":  "300px",
+        "height": "124px"
     },
     "logo-nok": {
-        "width":  "130px",
-        "height": "68px"
+        "width":  "300px",
+        "height": "124px"
     },
-    "logo-ori": {
-        "width":  "207px",
-        "height": "25px"
-    },
-    "logo-pr": {
-        "width":  "220px",
-        "height": "86px"
+    "logo-sbab": {
+        "width":  "300px",
+        "height": "124px"
     },
     "logo-sfk": {
-        "width":  "175px",
-        "height": "52px"
+        "width":  "300px",
+        "height": "124px"
     },
     "logo-t2": {
-        "width":  "139px",
-        "height": "53px"
-    },
-    "logo-ur": {
-        "width":  "83px",
-        "height": "83px"
+        "width":  "300px",
+        "height": "124px"
     },
     "logo-va": {
-        "width":  "221px",
-        "height": "48px"
+        "width":  "300px",
+        "height": "124px"
     },
     "logo-vias": {
-        "width":  "174px",
-        "height": "44px"
-    },
-    "logo-vs": {
-        "width":  "221px",
-        "height": "29px"
+        "width":  "300px",
+        "height": "124px"
     },
     "menu": {
         "width":  "24px",

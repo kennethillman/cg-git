@@ -83,9 +83,8 @@ $className: o-clients;
 
 		svg {
 			fill: $blue3;
-			height: auto; 
-			width: 76%;
-			max-height: 70px;
+			height: 70px; 
+			width: 100%;
 		}
 
 
@@ -147,7 +146,8 @@ $className: o-clients;
 		}
 		
 		svg {
-			width: 71%;
+			height: 100px;
+			width: 100%;
 		}
 
 
@@ -165,7 +165,8 @@ $className: o-clients;
 		}
 
 		svg {
-			width: 66%;
+			height: 100px;
+			width: 100%;
 		}
 
 } // VP768 END
@@ -193,7 +194,7 @@ $className: o-clients;
 		}
 	
 		svg {
-			width: 56%;
+			width: 100%;
 		}
 	
 } // VP1280 END

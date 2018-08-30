@@ -97,6 +97,7 @@ BUTTONS & LINKS
 			border: 2px solid $link;
 			color: $link;
 			box-sizing: border-box;
+			transition: background 300ms;
 
 			&:hover {
 				background: $link;
@@ -152,6 +153,7 @@ BUTTONS & LINKS
 		.btn {
 			background:$white;
 			color: $black;
+			transition: background 300ms;
 
 			&.-ghost {
 				background: none;
