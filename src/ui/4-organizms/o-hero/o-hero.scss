@@ -218,7 +218,7 @@ $className: o-hero;
 
 		&.-lf {
 			background-color: #f3f3f3 ;
-			background-image: url('/assets/images/lf/lf-illustration.svg');
+			// background-image: url('/assets/images/lf/lf-illustration.svg');
 			background-position: -17vw bottom;
 			position: relative;
 			background-size: 200%;
@@ -438,7 +438,7 @@ $className: o-hero;
 			min-height: 740px;
 			background-size: 80vw;
 			.hand {
-				width: 210px;
+				width: 250px;
 			    bottom: -70px;
 			    left: -14px;
 			}
@@ -506,7 +506,7 @@ $className: o-hero;
 			background-size: 80vw;
 			min-height: 740px;
 			.hand {
-			    width: 200px;
+			    width: 250px;
 			    bottom: -60px;
 			    left: 40px;
 			}
