@@ -29,6 +29,8 @@ a.#{$className} {
 
 			.text {
 				@include transform(translateY(0px));
+				position: relative;
+				top: 45%;
 			}
 			figure {
 				opacity: 1;
@@ -123,8 +125,52 @@ a.#{$className} {
 		
 		}
 
+		.article-text-cnt {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding:0 3rem;
+		}
 
+		.article-text-title {
+			font-size: 32px;
+			font-weight: 400;
+			&--light {
+				color: #fff;
+			}
+			&::hover {
+				text-decoration: underline;
+			}
+		}
 
+		.article-link-cnt {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+			padding: 1rem;
+		}
+		
+		.article-label {
+			font-family: $font-a;
+			font-size: 1.2rem;
+			position: absolute;
+			bottom: 0;
+			right: 1rem;
+			text-decoration: underline;
+			&--light {
+				color: #fff;
+			}
+		}
 
 	// - - BG
 
@@ -137,7 +183,7 @@ a.#{$className} {
 		       only screen and (-webkit-min-device-pixel-ratio: 1.25),
 		       only screen and (min-device-pixel-ratio: 1.25),
 		       only screen and (min-resolution: 1.25dppx) {
-		    &.-viasatsport {background-image:url(/assets/images/casebild-viasport@2x.jpg);}
+			&.-viasatsport {background-image:url(/assets/images/casebild-viasport@2x.jpg);}
 		}
 
 		/* @3x Images (Pixel Ratio of 2.25+) */
@@ -145,7 +191,7 @@ a.#{$className} {
 		       only screen and (-webkit-min-device-pixel-ratio: 2.25),
 		       only screen and (min-device-pixel-ratio: 2.25),
 		       only screen and (min-resolution: 2.25dppx) {
-		    &.-viasatsport {background-image:url(/assets/images/casebild-viasport@3x.jpg);}
+			&.-viasatsport {background-image:url(/assets/images/casebild-viasport@3x.jpg);}
 		}
 
 		&.-lf {
@@ -206,6 +252,87 @@ a.#{$className} {
 		       only screen and (min-device-pixel-ratio: 2.25),
 		       only screen and (min-resolution: 2.25dppx) {
 		    &.-sf-kids {background-image:url(/assets/images/casebild-sf-kids@3x.png);}
+		}
+
+
+		&.-prototypeTV {
+			background-image:url(/assets/images/article_prototypingTV.jpg);
+		}
+		
+		/* @2x Images (Pixel Ratio of 1.25+) */
+		@media only screen and (-o-min-device-pixel-ratio: 5/4),
+		       only screen and (-webkit-min-device-pixel-ratio: 1.25),
+		       only screen and (min-device-pixel-ratio: 1.25),
+		       only screen and (min-resolution: 1.25dppx) {
+			&.-prototypeTV {background-image:url(/assets/images/article_prototypingTV@2x.jpg);}
+		}
+
+		/* @3x Images (Pixel Ratio of 2.25+) */
+		@media only screen and (-o-min-device-pixel-ratio: 9/4),
+		       only screen and (-webkit-min-device-pixel-ratio: 2.25),
+		       only screen and (min-device-pixel-ratio: 2.25),
+		       only screen and (min-resolution: 2.25dppx) {
+			&.-prototypeTV {background-image:url(/assets/images/article_prototypingTV@3x.jpg);}
+		}
+
+		&.-bubbles {
+			background-image:url(/assets/images/article_bubbles.jpg);
+		}
+		
+		/* @2x Images (Pixel Ratio of 1.25+) */
+		@media only screen and (-o-min-device-pixel-ratio: 5/4),
+		       only screen and (-webkit-min-device-pixel-ratio: 1.25),
+		       only screen and (min-device-pixel-ratio: 1.25),
+		       only screen and (min-resolution: 1.25dppx) {
+			&.-bubbles {background-image:url(/assets/images/article_bubbles@2x.jpg);}
+		}
+
+		/* @3x Images (Pixel Ratio of 2.25+) */
+		@media only screen and (-o-min-device-pixel-ratio: 9/4),
+		       only screen and (-webkit-min-device-pixel-ratio: 2.25),
+		       only screen and (min-device-pixel-ratio: 2.25),
+		       only screen and (min-resolution: 2.25dppx) {
+			&.-bubbles {background-image:url(/assets/images/article_bubbles@3x.jpg);}
+		}
+
+		&.-pomodoro {
+			background-image:url(/assets/images/article_pomodoro.jpg);
+		}
+		
+		/* @2x Images (Pixel Ratio of 1.25+) */
+		@media only screen and (-o-min-device-pixel-ratio: 5/4),
+		       only screen and (-webkit-min-device-pixel-ratio: 1.25),
+		       only screen and (min-device-pixel-ratio: 1.25),
+		       only screen and (min-resolution: 1.25dppx) {
+			&.-pomodoro {background-image:url(/assets/images/article_pomodoro@2x.jpg);}
+		}
+
+		/* @3x Images (Pixel Ratio of 2.25+) */
+		@media only screen and (-o-min-device-pixel-ratio: 9/4),
+		       only screen and (-webkit-min-device-pixel-ratio: 2.25),
+		       only screen and (min-device-pixel-ratio: 2.25),
+		       only screen and (min-resolution: 2.25dppx) {
+			&.-pomodoro {background-image:url(/assets/images/article_pomodoro@3x.jpg);}
+		}
+
+		&.-spiderPeople {
+			background-image:url(/assets/images/article_spiderPeople.jpg);
+		}
+		
+		/* @2x Images (Pixel Ratio of 1.25+) */
+		@media only screen and (-o-min-device-pixel-ratio: 5/4),
+		       only screen and (-webkit-min-device-pixel-ratio: 1.25),
+		       only screen and (min-device-pixel-ratio: 1.25),
+		       only screen and (min-resolution: 1.25dppx) {
+			&.-spiderPeople {background-image:url(/assets/images/article_spiderPeople@2x.jpg);}
+		}
+
+		/* @3x Images (Pixel Ratio of 2.25+) */
+		@media only screen and (-o-min-device-pixel-ratio: 9/4),
+		       only screen and (-webkit-min-device-pixel-ratio: 2.25),
+		       only screen and (min-device-pixel-ratio: 2.25),
+		       only screen and (min-resolution: 2.25dppx) {
+			&.-spiderPeople {background-image:url(/assets/images/article_spiderPeople@3x.jpg);}
 		}
 
 	// - - Modifiers

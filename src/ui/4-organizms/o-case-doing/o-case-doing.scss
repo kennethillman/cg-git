@@ -34,13 +34,11 @@ $className: o-case-doing;
 // VP320 - MOBILE AND TOUCH FIRST
 ////////////////////////////////////////////////////////////////
 
-
 @include VP320 {
 
 
 // - - General
 		min-height: 100vh;
-
 		display: flex;
 		align-items: center;
 		text-align: center;
