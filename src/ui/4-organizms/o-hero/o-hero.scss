@@ -235,6 +235,78 @@ $className: o-hero;
 
 		}
 
+	// NoK education
+
+		&.-nokeducation {
+			background-image: url('/assets/images/nokeducation/education-bg.png');
+			background-size: cover;
+			background-position: center top;
+			margin-bottom: 50px;
+
+			.cover-image {
+				position: absolute;
+				left: 0px;
+				bottom: -32px;
+				z-index: 99;
+				width: 195px;
+				height: 229px;
+			}
+		}
+
+	// NoK publications
+
+	&.-nokpublications {
+		background-color: #3429d5;
+		background-image: url('/assets/images/publications/publications_bg_img.png');
+		background-size: 90vh;
+		background-position: center top;
+		margin-bottom: 50px;
+		min-height: 1432px;
+
+		h1 {
+			margin-bottom: 252px;
+		}
+		.text-wrapper {
+			.medium { display: none}
+			figure {
+				position: relative;
+				left: -20%;
+				right: -20%;
+				width: 150vw;
+				margin: 52px 0 168px;
+			}
+		}
+	}
+
+
+	// boxer case
+
+		&.-boxercase {
+			background-color: $white;
+			background-image: url('/assets/images/boxer/boxer-bg-img.jpg');
+			background-position: left top;
+			padding-bottom: 82vw;
+
+			&.-case {
+
+				.btn {
+					position: absolute;
+					bottom: -20px;
+					right: 4vw;
+					z-index: 99;
+					background: $black;
+				}
+
+			}
+			.tilted {
+				margin-top: -100px;
+			}
+
+		}
+
+
+
+
 
 
 
@@ -305,6 +377,65 @@ $className: o-hero;
 
 			
 		}
+
+
+	// NoK education
+
+		&.-nokeducation {
+
+			.cover-image {
+				bottom: -62px;
+				width: 353px;
+				height: 416px;
+			}
+
+			.tilted {
+				margin-top: -100px !important;
+			}
+		}
+
+
+	// boxer case
+
+		&.-boxercase {
+			background-image: url('/assets/images/boxer/boxer-bg-img@2x.jpg');
+
+			&.-case {
+
+				.btn {
+					bottom: 120px;
+					background: $black;
+				}
+
+			}
+
+		}
+
+
+	// NoK publications
+
+	&.-nokpublications {
+		background-color: #3429d5;
+		background-image: url('/assets/images/publications/publications_bg_img.png');
+		background-size: 100%;
+		background-position: center top;
+		margin-bottom: 50px;
+		min-height: 2032px !important;
+
+		h1 {
+			margin-bottom: 618px;
+		}
+		.text-wrapper {
+			.medium {
+				display: block;
+			}
+			figure {
+				position: relative;
+				width: 98vw;
+				margin: 52px 0 168px;
+			}
+		}
+	}
 
 
 

@@ -203,6 +203,53 @@ $className: o-content;
 		}
 	}
 
+	&.-bg-img-bx-one {
+		background-image: url('/assets/images/boxer/bg-img-black.svg');
+		background-position: left 86px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		min-height: 407px;
+		margin-bottom: 50px;
+		position: relative;
+
+		figure {
+			.-image-quote-text {
+				font-size: 34px;
+				font-weight: 600;
+				letter-spacing: .6px;
+				font-style: italic;
+				color: $white;
+				padding: 40px 0;
+			}
+		}
+	}
+	&.-bg-img-bx-path-one{
+		background-image: url('/assets/images/boxer/path-bg-img-one.svg');
+		background-position: left center;
+		background-size: 100%;
+		background-repeat: no-repeat;
+	}
+
+
+	&.-nok-education-content-bg {
+		background-image: url('/assets/images/nokeducation/education-bg-tree.jpg');
+		background-size: 100%;
+		background-position: left bottom;
+		background-repeat: no-repeat;
+		margin-bottom: 50px;
+		min-height: 1892px;
+	}
+
+	&.-nok-pub-mobile-img {
+		position: relative;
+		z-index: 99;
+		margin-top: -392px;
+
+		figure {
+			margin-bottom: 70px;
+		}
+
+	}
 
 } // VP320 END
 
@@ -215,6 +262,44 @@ $className: o-content;
 ////////////////////////////////////////////////////////////////
 
 @include VP480 {
+	&.-bg-img-bx-one {
+		padding-bottom: 0;
+
+		figure {
+			margin-bottom: -20px;
+			.-image-quote-text {
+				padding: 40px 0;
+				position: absolute;
+				width: 32%;
+				top:40%;
+			}
+		}
+	}
+
+
+	&.-nok-education-content-bg {
+		background-image: url('/assets/images/nokeducation/education-bg-tree.png');
+		background-size: cover;
+		background-position: left bottom;
+		background-repeat: no-repeat;
+		margin-bottom: 50px;
+		min-height: 152vw;
+	}
+
+
+	&.-nok-pub-mobile-img {
+
+		figure:nth-child(1){
+			padding: 0 50px 0 0;
+		}
+		figure:nth-child(2){
+			padding: 0 25px;
+		}
+		figure:nth-child(3){
+			padding: 0 0 0 50px;
+		}
+
+	}
 	
 	   
 
