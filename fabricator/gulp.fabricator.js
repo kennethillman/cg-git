@@ -179,15 +179,15 @@ gulp.task('fab-assembler', (done) => {
         const type  = taxo[1].toLowerCase();                                          // All in lower case "material"
         const nameClean  = name.substring(2);                                         // Removes number prefix "1-"
         const nameHeader = nameClean.charAt(0).toUpperCase() + nameClean.slice(1);    // Makes first letter uppercase "Taxo"
-        
+
         if (type === 'view') {
 
             // Paths
             newPathsToInclued = 'src/ui/'+name+'/**/*';
-            newPathsToExlude = '!src/ui/'+name+'/**/*'; 
+            newPathsToExlude = '!src/ui/'+name+'/**/*';
             // Exlude taxonomy views from materials
             assemblerMaterials.push(newPathsToExlude);
-            // Include taxonomy in views 
+            // Include taxonomy in views
             assemblerViews.push(newPathsToInclued);
 
         }
@@ -218,7 +218,7 @@ gulp.task('fab-serve', () => {
   browserSync({
     server: {
       baseDir: fabconfig.dest,
-      index: "start.html"
+      index: "6-pages/index.html"
     },
     notify: false,
     logPrefix: 'FABRICATOR',
@@ -243,7 +243,7 @@ gulp.task('fab-serve', () => {
 
   gulp.task('ui-scripts:watch', ['ui-scripts'], browserSync.reload);
   gulp.watch(config.watch.scripts, ['ui-scripts:watch']);
- 
+
 
 });
 

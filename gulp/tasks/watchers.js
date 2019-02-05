@@ -14,7 +14,7 @@ const config = require('../config');
 gulp.task('watch:all', ['watch:styles', 'watch:scripts']);
 
 gulp.task('watch:styles', () => {
-	gulp.watch(config.watch.styles, [`styles-brand:${process.env.brand}`]);
+	gulp.watch(config.watch.styles, ['styles']);
 });
 
 gulp.task('watch:scripts', () => {

@@ -11,7 +11,7 @@
 	{{#if fabricator}}<link rel="stylesheet" href="{{#if baseurl}}{{ baseurl }}/{{/if}}assets/fabricator/styles/f.css">{{/if}}
 
 	<link rel="stylesheet" href="{{#if baseurl}}{{ baseurl }}/{{/if}}assets/at/styles/at.css">
-	<link rel="stylesheet" href="{{#if baseurl}}{{ baseurl }}/{{/if}}assets/styles/ui-styles.css">
+	<link rel="stylesheet" href="{{#if baseurl}}{{ baseurl }}/{{/if}}assets/styles/ui-styles.min.css">
 
 	<!-- toolkit styles -->
 	<!--
@@ -20,20 +20,20 @@
 	<!-- /toolkit styles -->
 
 
-	
+
 
 </head>
 <body class="{{#if fabricator}}fabricator{{/if}} {{class-body}} f-menu-overtake -f-show-extras">
 
 
-	{{> f-svg-sprites}}	
+	{{> f-svg-sprites}}
 
 	{{#if fabricator}}
 		{{> f-icons}}
 		{{> f-control-bar}}
 		{{> f-menu}}
 		<div class="f-container">
-			
+
 	{{/if}}
 
 

@@ -38,19 +38,28 @@ gulp.task('styles:print', () =>
 
 const styleOutput = function() {
     let stylesrc = config.styles.src;
-    // stylesrc = [`assets/styles/branding/${env}/seagal.scss`,`assets/styles/branding/${env}/seagal-fallback.scss`];
-
+    
     return gulp.src(stylesrc)
+        // .pipe(header("@import './src/assets/styles/ui-gulp-stream-include.scss';"))
+        // .pipe(sourcemaps.init())
+        // .pipe(gulpif(!config.lint, using()))
+        // .pipe(sass({ outputStyle: 'compact' }))
+        // .pipe(concat('ui-styles.css'))
+        // .pipe(gulpif(config.prod, cssnano()))
+        // .pipe(gulpif(config.prod, rename({ suffix: '.min' })))
+        // .pipe(gulpif(config.prod, sourcemaps.write('.'), sourcemaps.write()))
+        // .pipe(gulp.dest(path.join(fabconfig.dest, 'assets/styles')))
+        // .pipe(gulpif(!config.prod, gulp.dest(path.join(config.styles.dev, 'assets/styles')), gulp.dest(path.join(config.styles.dist, 'assets/styles'))));
         .pipe(header("@import './src/assets/styles/ui-gulp-stream-include.scss';"))
         .pipe(sourcemaps.init())
         .pipe(gulpif(!config.lint, using()))
         .pipe(sass({ outputStyle: 'compact' }))
         .pipe(concat('ui-styles.css'))
-        .pipe(gulpif(config.prod, cssnano()))
-        .pipe(gulpif(config.prod, rename({ suffix: '.min' })))
-        .pipe(gulpif(config.prod, sourcemaps.write('.'), sourcemaps.write()))
+        .pipe(cssnano())
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(sourcemaps.write('.'), sourcemaps.write())
         .pipe(gulp.dest(path.join(fabconfig.dest, 'assets/styles')))
-        .pipe(gulpif(!config.prod, gulp.dest(path.join(config.styles.dev, 'assets/styles')), gulp.dest(path.join(config.styles.dist, 'assets/styles'))));
+        .pipe(gulp.dest(path.join(config.styles.dist, 'assets/styles')));
 };  
 
 gulp.task('ui-styles', () => styleOutput());

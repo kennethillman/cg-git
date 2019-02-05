@@ -21,20 +21,6 @@ const fabconfig = require('./gulp/fabconfig');
 const config = require('./gulp/config');
 
 
-// $ gulp                    (All - dev mode)  
-// $ gulp styleguide         (All - Launch the Style guide)
-// $ gulp --brand activetalents    (Any brand in collection)
-
-// $ gulp --prod             (All - produktion mode, minified and optimized)  
-// $ gulp --lint             (Activates linting for Styles and Scripts)  
-
-// $ gulp clean              (Delete dev & dist folders)
-// $ gulp clean:dev          (Keeps graphics and images in dev folder)
-// $ gulp graphics           (Image and svg tasks)
-
-
-// $ gulp graphics:all
-
 
 
 ///////////////////////////
@@ -117,46 +103,4 @@ gulp.task('default', ['fab-clean'], () => {
 
 });
 
-
-
-///////////////////////////
-// $ gulp
-///////////////////////////
-/*
-gulp.task('default', () => {
-    if (!config.prod) {
-        
-        process.env.brand = 'all';
-
-        if (argv.brand) {
-            process.env.brand = argv.brand;
-        }
-
-        runSequence(
-            'clean:dev-part',
-            'graphics:all',
-            `styles-brand:${process.env.brand}`, // Brand flag
-            [
-                'scripts'
-            ],
-            'watch:all' // Brand flag
-        );
-
-        if (config.lint) {
-            runSequence(
-                'lint:all'
-            );
-        }
-
-    } else {
-        runSequence(
-            'clean:dist',
-            'graphics:all',
-            [
-                'styles-brand:all',
-                'scripts',
-            ]
-        );
-    }
-}); */
 

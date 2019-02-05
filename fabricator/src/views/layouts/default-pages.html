@@ -16,7 +16,7 @@
 		 /* Uniqe for each page type */
     	 /* > UI.aboutCritical }} ??? */
 
- 
+
 	</style>
 
 
@@ -25,21 +25,21 @@
 
 	<!-- Temp link -->
 
-		<link rel="styleSheet" href="/assets/styles/ui-styles.css">
+		<link rel="styleSheet" href="/assets/styles/ui-styles.min.css">
 		<link rel="styleSheet" href="/assets/at/styles/at.css">
 
 		{{#if fabricator}}<link rel="stylesheet" href="../assets/fabricator/styles/f.css">{{/if}}
-	
+
 	<script>
-		
+
 	  	/* - - Inline Preset paths - - */
 	    {{> UI.inlinePreset }}
 
 	  	/* - - Inline Async loader - - */
-	    {{> UI.inlineToast }}	
+	    {{> UI.inlineToast }}
 
 		/* - - Inline JS generated taxonomy scopes - - */
-	    {{> UI.inlineGeneratedJsScope }}	 
+	    {{> UI.inlineGeneratedJsScope }}
 
 	  	/* - - Inline Critical JS - - */
 	    {{> UI.inlineHead }}
@@ -69,15 +69,15 @@
 	  // UI.initial.loadSvgSprites(UI_PRESET.path.svg.graphics, 'SVG Grafik');
 	</script>
 
-	
+
 	<div class="bg-fade">
 		{% body %}
 	</div>
 
 
 	<script>
-	    {{> UI.inlineFooter }}	
-	</script> 
+	    {{> UI.inlineFooter }}
+	</script>
 
 	    <!-- Google Tag Manager (noscript) -->
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFBBL4P" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
