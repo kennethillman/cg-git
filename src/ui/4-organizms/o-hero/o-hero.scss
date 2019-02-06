@@ -253,6 +253,7 @@ $className: o-hero;
 			}
 		}
 
+
 	// NoK publications
 
 	&.-nokpublications {
@@ -279,25 +280,14 @@ $className: o-hero;
 	}
 
 
-	// boxer case
+	// boxer 
 
-		&.-boxercase {
+		&.-boxer {
 			background-color: $white;
 			background-image: url('/assets/images/boxer/boxer-bg-img.jpg');
 			background-position: left top;
 			padding-bottom: 82vw;
 
-			&.-case {
-
-				.btn {
-					position: absolute;
-					bottom: -20px;
-					right: 4vw;
-					z-index: 99;
-					background: $black;
-				}
-
-			}
 			.tilted {
 				margin-top: -100px;
 			}
@@ -305,19 +295,38 @@ $className: o-hero;
 		}
 
 
-
-
-
-
-
-
-
-
-
-
 } // VP320 END
 
 
+
+////////////////////////////////////////////////////////////////
+// XSMALL
+////////////////////////////////////////////////////////////////
+
+
+@include XSMALL {
+
+	// boxer 
+
+	&.-boxer {
+
+		&.-case {
+
+			.btn {
+				position: absolute;
+				bottom: -20px;
+				left: 50%;
+				transform: translateX(-50%);
+				z-index: 99;
+				background: $black;
+			}
+
+		}
+
+
+	}
+
+}
 
 
 
@@ -397,7 +406,7 @@ $className: o-hero;
 
 	// boxer case
 
-		&.-boxercase {
+		&.-boxer {
 			background-image: url('/assets/images/boxer/boxer-bg-img@2x.jpg');
 
 			&.-case {
@@ -607,6 +616,18 @@ $className: o-hero;
 
 		}
 
+	// boxer 
+
+		&.-boxer {
+			    background-position: center;
+			.text-wrapper {
+				max-width: 90%;
+				h1 {
+					margin-top: -1em;
+				}
+			}
+		}
+
 
 } // VP768 END
 
@@ -654,6 +675,16 @@ $className: o-hero;
 				right: 24%;
 			}
 
+		}
+
+			// boxer 
+
+		&.-boxer {
+			.text-wrapper {
+				h1 {
+					margin-top: -2.5em;
+				}
+			}
 		}
 		
 } // VP1024 END
