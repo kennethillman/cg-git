@@ -752,6 +752,9 @@ $className: o-hero;
 				margin-top: 26px;
 				margin-bottom: 240px;
 			}
+			.tilted {
+				background-color: #eff3e6;
+			}
 			.text-wrapper {
 				margin-top: 85px;
 				width: 90%;
@@ -906,17 +909,15 @@ $className: o-hero;
 
 	// NoK education
 
-		&.-nokeducation {
-
-			.cover-image {
-				width: 482px;
-			}
-			
+	&.-nokeducation {
+		.cover-image {
+			width: 482px;
 		}
+	}
 
 	&.-nokpublications {
-			background-position: center -12vw;
-		}
+		background-position: center -12vw;
+	}
 
 
 	
