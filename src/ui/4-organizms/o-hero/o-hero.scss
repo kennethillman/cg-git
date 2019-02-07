@@ -258,7 +258,7 @@ $className: o-hero;
 	&.-nokpublications {
 		background-color: #3429d5;
 		background-image: url('/assets/images/publications/publications_bg_img.png');
-		background-size: 700px;
+		background-size: 780px;
 		background-position: center top;
 		margin-bottom: 50px;
 
@@ -278,10 +278,10 @@ $className: o-hero;
 
 			figure {
 				position: relative;
-				left: -20%;
-				right: -20%;
+				left: 50%;
 				width: 150vw;
 				margin: 0 0 168px;
+				transform: translateX(-50%);
 			}
 		}
 	}
@@ -356,7 +356,6 @@ $className: o-hero;
 				right: 4vw;
 			}
 
-
 		}
 	
 
@@ -376,7 +375,7 @@ $className: o-hero;
 
 		&.-sfkidsplay {
 
-			   background-position: center -139px;
+			background-position: center -139px;
 
 			.purple {
 				width: 160px;
@@ -425,40 +424,16 @@ $className: o-hero;
 	// NoK publications
 
 		&.-nokpublications {
+
+		background-position: center -100px;
+
+			.text-wrapper {
+				max-width: 70%;
+			}		
 			
 		}
 
 
-	// NoK publications
-
-	&.-nokpublications {
-		background-image: url('/assets/images/publications/publications_bg_img.png');
-		background-size: 700px;
-		background-position: center top;
-
-		h1 {
-			margin-bottom: 0px;
-		}
-		.text-wrapper {
-
-			.medium { 
-				display: none
-			}
-
-			p {
-
-				margin-bottom: 60px;
-			}
-
-			figure {
-				position: relative;
-				left: -20%;
-				right: -20%;
-				width: 150vw;
-				margin: 0 0 168px;
-			}
-		}
-	}
 
 
 
@@ -495,21 +470,14 @@ $className: o-hero;
 		}
 	}
 
-	// SF Kidz play
-
-		&.-sfkidsplay {
-
-	
-
-
-		}
 
 
 	// NoK publications
 
 		&.-nokpublications {
 			background-image: url('/assets/images/publications/publications_books_bg_img.png');
-			background-size: 640px;
+			background-size: 1024px;
+			background-position: center top;
 
 			h1 {
 				margin-top: 48px;
@@ -682,6 +650,7 @@ $className: o-hero;
 		&.-nokpublications {
 			background-size: 1024px;
 
+
 			h1 {
 				margin-top: 26px;
 				margin-bottom: 220px;
@@ -774,15 +743,19 @@ $className: o-hero;
 	// NoK publications
 
 		&.-nokpublications {
-			background-size: 1024px;
+			background-size: 1280px;
 			max-height: inherit;
 			min-height: inherit;
+			background-position: center -110px;
 
 			h1 {
 				margin-top: 26px;
 				margin-bottom: 240px;
 			}
 			.text-wrapper {
+				margin-top: 85px;
+				width: 90%;
+				max-width: 90%;
 
 				p {
 
@@ -866,7 +839,8 @@ $className: o-hero;
 	// NoK publications
 
 		&.-nokpublications {
-			background-size: 1400px;
+			background-size: contain;
+			background-position: center top;
 
 			h1 {
 				margin-top: 140px;
@@ -889,6 +863,20 @@ $className: o-hero;
 	
 } // VP1280 END
 
+
+////////////////////////////////////////////////////////////////
+// VP1440
+////////////////////////////////////////////////////////////////
+
+@include VP1440 {
+
+		// NoK publications
+
+		&.-nokpublications {
+			background-position: center -6vw;
+		}
+
+}
 
 ////////////////////////////////////////////////////////////////
 // VP1680
@@ -926,6 +914,9 @@ $className: o-hero;
 			
 		}
 
+	&.-nokpublications {
+			background-position: center -12vw;
+		}
 
 
 	
@@ -943,6 +934,8 @@ $className: o-hero;
 		background-position: center -12vh;	
 
 	}
+
+
 } // VP1920 END
 
 
