@@ -257,14 +257,11 @@ $className: o-content;
 
 		.mobile-profile-img { 
 			position: relative;
-			margin-bottom: 44px;
-			min-height: 540px;
-			vertical-align: bottom;
+			margin-bottom: 84px;
 
 			.desc {
-				margin-bottom: -20px;
 				position: absolute;
-				bottom: 24px;
+				bottom: -24px;
 				left: 0;
 				right: 0;
 				z-index: 99;
@@ -334,6 +331,16 @@ $className: o-content;
 		background-repeat: no-repeat;
 		margin-bottom: 50px;
 		min-height: 152vw;
+
+			.mobile-profile-img { 
+				margin-bottom: 84px;
+
+				.desc {
+					bottom: -24px;
+				}
+
+			}
+
 	}
 
 
@@ -377,6 +384,19 @@ $className: o-content;
 		}
 
 	}
+
+	&.-nok-education-content-bg {
+
+			.mobile-profile-img { 
+				margin-bottom: 84px;
+
+				.desc {
+					bottom: -24px;
+				}
+
+			}
+
+	}
 	
 } // VP600 END
 
@@ -405,6 +425,21 @@ $className: o-content;
 					width: 54%;
 				}
 		}
+
+	}
+
+
+	&.-nok-education-content-bg {
+
+			.mobile-profile-img { 
+				margin-bottom: 84px;
+				margin-top: 88px;
+
+				.desc {
+					bottom: -24px;
+				}
+
+			}
 
 	}
 
@@ -467,6 +502,28 @@ $className: o-content;
 			}
 		}
 		
+	}
+
+
+	&.-nok-education-content-bg {
+
+			.mobile-profile-img { 
+				margin-bottom: 84px;
+				margin-top: 88px;
+				&.left-img {
+					margin-right: 50px;
+				}
+				&.right-img {
+					margin-left: 50px;
+				}
+
+				.desc {
+					bottom: -24px;
+					padding-left: 6em;
+				}
+
+			}
+
 	}
 
 		
