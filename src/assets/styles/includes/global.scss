@@ -20,8 +20,13 @@
 
 	}
 
+
+
 	.case-content {
 		background: #fff;
+		&.-case-nok-publications {
+			background-color: #eff3e6;
+		}
 	}
 
 
@@ -34,18 +39,15 @@
 		position: fixed;
 		right: 0px;
 		z-index: 201;
-
 		&.one {
 			top: 0px;
 		}
 		&.two {
 			top: 50%;
-			
 		}
 		&.three {
 			bottom: 100px;
 		}
-
 		&.-on-inverted {
 			background: color(pink);
 		}

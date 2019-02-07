@@ -44,7 +44,6 @@ $className: o-case-next;
 	text-align: center;
 	text-decoration: none;
 
-
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -109,6 +108,18 @@ $className: o-case-next;
 
 	&.-lf {
 		background-color: #f3f3f3 ;
+	}
+
+	&.-nokpublications {
+		background-color: #203555;
+	}
+
+	&.-nokeducation {
+		background-color: #7d9647;
+	}
+
+	&.-boxer {
+		background-color: #ccdce7;
 	}
 
 
@@ -182,6 +193,7 @@ $className: o-case-next;
 		height: 50px;
 	}
 
+
 	&.-viasatsport {
 		background-color: $visatsport;
 		background-image: url('/assets/images/viasport-top-image@2x.png');
@@ -189,6 +201,31 @@ $className: o-case-next;
 		background-repeat: no-repeat;
 		background-position: left bottom;
 	}
+
+
+
+	&.-nokpublications {
+		background-image: url(/assets/images/publications/publications_bg_img.png);
+	    background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: left bottom;
+	}
+
+	&.-nokeducation {
+		background-image: url(/assets/images/education/education_bg_img.png);
+	    background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: left bottom;
+	}
+
+	&.-boxer {;
+		background-image: url(/assets/images/boxer/boxer-bg-img@2x.jpg);
+	    background-size: cover;
+	    background-position: center;
+		background-repeat: no-repeat;
+	}
+
+
 
 	&.-sfkidsplay {
 			background-color: #e3f1f7;

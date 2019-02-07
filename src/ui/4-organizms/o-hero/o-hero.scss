@@ -235,17 +235,108 @@ $className: o-hero;
 
 		}
 
+	// NoK education
+
+		&.-nokeducation {
+			background-image: url('/assets/images/nokeducation/education-bg.png');
+			background-size: cover;
+			background-position: center -1px;
+			margin-bottom: 50px;
+
+			.cover-image {
+				position: absolute;
+				left: 0px;
+				bottom: 0px;
+				z-index: 99;
+				width: 222px;
+			}
+		}
 
 
+	// NoK publications
+
+	&.-nokpublications {
+		background-color: #3429d5;
+		background-image: url('/assets/images/publications/publications_bg_img.png');
+		background-size: 780px;
+		background-position: center top;
+		margin-bottom: 50px;
+		.tilted {
+				background-color: #eff3e6;
+			}
+
+		h1 {
+			margin-bottom: 180px;
+		}
+		.text-wrapper {
+
+			.medium { 
+				display: none
+			}
+
+			p {
+
+				margin-bottom: 60px;
+			}
+
+			figure {
+				position: relative;
+				left: 50%;
+				width: 150vw;
+				margin: 0 0 168px;
+				transform: translateX(-50%);
+			}
+		}
+	}
 
 
+	// boxer 
 
+		&.-boxer {
+			background-color: $white;
+			background-image: url('/assets/images/boxer/boxer-bg-img.jpg');
+			background-position: left top;
+			padding-bottom: 82vw;
 
+			.tilted {
+				margin-top: -100px;
+			}
+
+		}
 
 
 } // VP320 END
 
 
+
+////////////////////////////////////////////////////////////////
+// XSMALL
+////////////////////////////////////////////////////////////////
+
+
+@include XSMALL {
+
+	// boxer 
+
+	&.-boxer {
+
+		&.-case {
+
+			.btn {
+				position: absolute;
+				bottom: -20px;
+				left: 50%;
+				transform: translateX(-50%);
+				z-index: 99;
+				background: $black;
+			}
+
+		}
+
+
+	}
+
+}
 
 
 
@@ -268,7 +359,6 @@ $className: o-hero;
 				right: 4vw;
 			}
 
-
 		}
 	
 
@@ -288,7 +378,7 @@ $className: o-hero;
 
 		&.-sfkidsplay {
 
-			   background-position: center -139px;
+			background-position: center -139px;
 
 			.purple {
 				width: 160px;
@@ -305,6 +395,48 @@ $className: o-hero;
 
 			
 		}
+
+
+	// NoK education
+
+		&.-nokeducation {
+
+			.cover-image {
+				width: 210px;
+			}
+
+		}
+
+
+	// boxer case
+
+		&.-boxer {
+			background-image: url('/assets/images/boxer/boxer-bg-img@2x.jpg');
+
+			&.-case {
+
+				.btn {
+					bottom: 120px;
+					background: $black;
+				}
+
+			}
+
+		}
+
+	// NoK publications
+
+		&.-nokpublications {
+
+		background-position: center -100px;
+
+			.text-wrapper {
+				max-width: 70%;
+			}		
+			
+		}
+
+
 
 
 
@@ -341,13 +473,30 @@ $className: o-hero;
 		}
 	}
 
-	// SF Kidz play
-
-		&.-sfkidsplay {
-
-	
 
 
+	// NoK publications
+
+		&.-nokpublications {
+			background-image: url('/assets/images/publications/publications_books_bg_img.png');
+			background-size: 1024px;
+			background-position: center top;
+
+			h1 {
+				margin-top: 48px;
+				margin-bottom: 260px;
+			}
+			.text-wrapper {
+
+				p {
+
+					margin-bottom: 60px;
+				}
+
+				figure {
+					margin: 0 0 168px;
+				}
+			}
 		}
 
 
@@ -476,6 +625,54 @@ $className: o-hero;
 
 		}
 
+	// boxer 
+
+		&.-boxer {
+			    background-position: center;
+			.text-wrapper {
+				max-width: 90%;
+				h1 {
+					margin-top: -1em;
+				}
+			}
+		}
+
+		// NoK education
+
+		&.-nokeducation {
+
+			.cover-image {
+				width: 221px;
+			}
+			
+		}
+
+
+	// NoK publications
+
+		&.-nokpublications {
+			background-size: 1024px;
+
+
+			h1 {
+				margin-top: 26px;
+				margin-bottom: 220px;
+			}
+			.text-wrapper {
+
+				p {
+
+					margin-bottom: 60px;
+				}
+
+				figure {
+					width: 98vw;
+					margin: 0 0 242px;
+				}
+			}
+		}
+
+
 
 } // VP768 END
 
@@ -524,6 +721,59 @@ $className: o-hero;
 			}
 
 		}
+
+			// boxer 
+
+		&.-boxer {
+			.text-wrapper {
+				h1 {
+					margin-top: -2.5em;
+				}
+			}
+		}
+
+	// NoK education
+
+		&.-nokeducation {
+
+			.cover-image {
+				width: 252px;
+			}
+			
+		}
+
+		
+	// NoK publications
+
+		&.-nokpublications {
+			background-size: 1280px;
+			max-height: inherit;
+			min-height: inherit;
+			background-position: center -110px;
+
+			h1 {
+				margin-top: 26px;
+				margin-bottom: 240px;
+			}
+			
+			.text-wrapper {
+				margin-top: 85px;
+				width: 90%;
+				max-width: 90%;
+
+				p {
+
+					margin-bottom: 60px;
+				}
+
+				figure {
+					width: 98vw;
+					margin: 0 0 242px;
+				}
+			}
+		}
+
+
 		
 } // VP1024 END
 
@@ -590,9 +840,47 @@ $className: o-hero;
 
 		}
 
+	// NoK publications
+
+		&.-nokpublications {
+			background-size: contain;
+			background-position: center top;
+
+			h1 {
+				margin-top: 140px;
+				margin-bottom: 420px;
+			}
+			.text-wrapper {
+
+				p {
+
+					margin-bottom: 120px;
+				}
+
+				figure {
+					width: 98vw;
+					margin: 0 0 242px;
+				}
+			}
+		}
+
 	
 } // VP1280 END
 
+
+////////////////////////////////////////////////////////////////
+// VP1440
+////////////////////////////////////////////////////////////////
+
+@include VP1440 {
+
+		// NoK publications
+
+		&.-nokpublications {
+			background-position: center -6vw;
+		}
+
+}
 
 ////////////////////////////////////////////////////////////////
 // VP1680
@@ -620,6 +908,19 @@ $className: o-hero;
 
 	}
 
+	// NoK education
+
+	&.-nokeducation {
+		.cover-image {
+			width: 482px;
+		}
+	}
+
+	&.-nokpublications {
+		background-position: center -12vw;
+	}
+
+
 	
 } // VP1680 END
 
@@ -635,6 +936,8 @@ $className: o-hero;
 		background-position: center -12vh;	
 
 	}
+
+
 } // VP1920 END
 
 
