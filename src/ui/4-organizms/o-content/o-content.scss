@@ -238,17 +238,51 @@ $className: o-content;
 		background-repeat: no-repeat;
 		margin-bottom: 50px;
 		min-height: 1892px;
+
+		.mobile-profile-img { 
+			position: relative;
+			margin-bottom: 44px;
+			min-height: 540px;
+			vertical-align: bottom;
+
+			.desc {
+				margin-bottom: -20px;
+				position: absolute;
+				bottom: 24px;
+				left: 0;
+				right: 0;
+				z-index: 99;
+			}
+
+		}
 	}
 
 	&.-nok-pub-mobile-img {
 		position: relative;
 		z-index: 99;
-		margin-top: -392px;
+		margin-top: -372px;
 
 		figure {
 			margin-bottom: 70px;
 		}
 
+	}
+
+	.boxer-quote-image-text {
+		position: relative;
+		.-image-quote-text {
+			font-family: $font-a;
+			letter-spacing: .6px;
+
+			span {
+					font-family: Arial, Helvetica, sans-serif;
+					color: rgba(255, 255, 255, 0.2);
+				    font-size: 128px;
+				    font-weight: 800;
+				    font-style: normal;
+				    display: inline-block;
+			    }
+		}
 	}
 
 } // VP320 END
@@ -308,14 +342,43 @@ $className: o-content;
 
 
 ////////////////////////////////////////////////////////////////
+// VP600
+////////////////////////////////////////////////////////////////
+
+
+@include VP600 {
+
+	&.-nok-pub-mobile-img {
+
+		figure:nth-child(1){
+			padding: 0 0px 0 0;
+		}
+		figure:nth-child(2){
+			padding: 0 0px;
+		}
+		figure:nth-child(3){
+			padding: 0 0 0 0px;
+		}
+
+	}
+	
+} // VP600 END
+
+
+////////////////////////////////////////////////////////////////
 // VP768
 ////////////////////////////////////////////////////////////////
 
 @include VP768 {
 
+	&.-nok-pub-mobile-img {
+		margin-top: -342px;
+	}
+
 	
 	
 } // VP768 END
+
 
 
 ////////////////////////////////////////////////////////////////
@@ -338,6 +401,22 @@ $className: o-content;
 		.desc {
 			max-width: 65vw
 		}
+	}
+
+	
+
+	&.-nok-pub-mobile-img {
+
+		figure:nth-child(1){
+			padding: 0 50px 0 0;
+		}
+		figure:nth-child(2){
+			padding: 0 25px;
+		}
+		figure:nth-child(3){
+			padding: 0 0 0 50px;
+		}
+
 	}
 
 		

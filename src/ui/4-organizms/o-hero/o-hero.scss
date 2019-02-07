@@ -240,16 +240,15 @@ $className: o-hero;
 		&.-nokeducation {
 			background-image: url('/assets/images/nokeducation/education-bg.png');
 			background-size: cover;
-			background-position: center top;
+			background-position: center -1px;
 			margin-bottom: 50px;
 
 			.cover-image {
 				position: absolute;
 				left: 0px;
-				bottom: -32px;
+				bottom: 0px;
 				z-index: 99;
-				width: 195px;
-				height: 229px;
+				width: 222px;
 			}
 		}
 
@@ -259,22 +258,30 @@ $className: o-hero;
 	&.-nokpublications {
 		background-color: #3429d5;
 		background-image: url('/assets/images/publications/publications_bg_img.png');
-		background-size: 90vh;
+		background-size: 700px;
 		background-position: center top;
 		margin-bottom: 50px;
-		min-height: 1432px;
 
 		h1 {
-			margin-bottom: 252px;
+			margin-bottom: 180px;
 		}
 		.text-wrapper {
-			.medium { display: none}
+
+			.medium { 
+				display: none
+			}
+
+			p {
+
+				margin-bottom: 60px;
+			}
+
 			figure {
 				position: relative;
 				left: -20%;
 				right: -20%;
 				width: 150vw;
-				margin: 52px 0 168px;
+				margin: 0 0 168px;
 			}
 		}
 	}
@@ -393,14 +400,9 @@ $className: o-hero;
 		&.-nokeducation {
 
 			.cover-image {
-				bottom: -62px;
-				width: 353px;
-				height: 416px;
+				width: 210px;
 			}
 
-			.tilted {
-				margin-top: -100px !important;
-			}
 		}
 
 
@@ -420,28 +422,40 @@ $className: o-hero;
 
 		}
 
+	// NoK publications
+
+		&.-nokpublications {
+			
+		}
+
 
 	// NoK publications
 
 	&.-nokpublications {
-		background-color: #3429d5;
 		background-image: url('/assets/images/publications/publications_bg_img.png');
-		background-size: 100%;
+		background-size: 700px;
 		background-position: center top;
-		margin-bottom: 50px;
-		min-height: 2032px !important;
 
 		h1 {
-			margin-bottom: 618px;
+			margin-bottom: 0px;
 		}
 		.text-wrapper {
-			.medium {
-				display: block;
+
+			.medium { 
+				display: none
 			}
+
+			p {
+
+				margin-bottom: 60px;
+			}
+
 			figure {
 				position: relative;
-				width: 98vw;
-				margin: 52px 0 168px;
+				left: -20%;
+				right: -20%;
+				width: 150vw;
+				margin: 0 0 168px;
 			}
 		}
 	}
@@ -488,6 +502,30 @@ $className: o-hero;
 	
 
 
+		}
+
+
+	// NoK publications
+
+		&.-nokpublications {
+			background-image: url('/assets/images/publications/publications_books_bg_img.png');
+			background-size: 640px;
+
+			h1 {
+				margin-top: 48px;
+				margin-bottom: 260px;
+			}
+			.text-wrapper {
+
+				p {
+
+					margin-bottom: 60px;
+				}
+
+				figure {
+					margin: 0 0 168px;
+				}
+			}
 		}
 
 
@@ -628,6 +666,41 @@ $className: o-hero;
 			}
 		}
 
+		// NoK education
+
+		&.-nokeducation {
+
+			.cover-image {
+				width: 221px;
+			}
+			
+		}
+
+
+	// NoK publications
+
+		&.-nokpublications {
+			background-size: 1024px;
+
+			h1 {
+				margin-top: 26px;
+				margin-bottom: 220px;
+			}
+			.text-wrapper {
+
+				p {
+
+					margin-bottom: 60px;
+				}
+
+				figure {
+					width: 98vw;
+					margin: 0 0 242px;
+				}
+			}
+		}
+
+
 
 } // VP768 END
 
@@ -686,6 +759,44 @@ $className: o-hero;
 				}
 			}
 		}
+
+	// NoK education
+
+		&.-nokeducation {
+
+			.cover-image {
+				width: 252px;
+			}
+			
+		}
+
+		
+	// NoK publications
+
+		&.-nokpublications {
+			background-size: 1024px;
+			max-height: inherit;
+			min-height: inherit;
+
+			h1 {
+				margin-top: 26px;
+				margin-bottom: 240px;
+			}
+			.text-wrapper {
+
+				p {
+
+					margin-bottom: 60px;
+				}
+
+				figure {
+					width: 98vw;
+					margin: 0 0 242px;
+				}
+			}
+		}
+
+
 		
 } // VP1024 END
 
@@ -752,6 +863,29 @@ $className: o-hero;
 
 		}
 
+	// NoK publications
+
+		&.-nokpublications {
+			background-size: 1400px;
+
+			h1 {
+				margin-top: 140px;
+				margin-bottom: 420px;
+			}
+			.text-wrapper {
+
+				p {
+
+					margin-bottom: 120px;
+				}
+
+				figure {
+					width: 98vw;
+					margin: 0 0 242px;
+				}
+			}
+		}
+
 	
 } // VP1280 END
 
@@ -781,6 +915,18 @@ $className: o-hero;
 		background-position: center -20vh;	
 
 	}
+
+	// NoK education
+
+		&.-nokeducation {
+
+			.cover-image {
+				width: 482px;
+			}
+			
+		}
+
+
 
 	
 } // VP1680 END
