@@ -478,9 +478,9 @@ $className: o-hero;
 	// NoK publications
 
 		&.-nokpublications {
-			background-image: url('/assets/images/publications/publications_books_bg_img.png');
+			
 			background-size: 1024px;
-			background-position: center top;
+			background-position: center -170px;
 
 			h1 {
 				margin-top: 48px;
@@ -491,6 +491,9 @@ $className: o-hero;
 				p {
 
 					margin-bottom: 60px;
+					max-width: 750px;
+					margin-right: auto;
+					margin-left: auto;
 				}
 
 				figure {
@@ -663,11 +666,13 @@ $className: o-hero;
 				p {
 
 					margin-bottom: 60px;
+
 				}
 
 				figure {
 					width: 98vw;
 					margin: 0 0 242px;
+					max-width: 78vw;
 				}
 			}
 		}
@@ -750,6 +755,7 @@ $className: o-hero;
 			max-height: inherit;
 			min-height: inherit;
 			background-position: center -110px;
+			background-image: url('/assets/images/publications/publications_books_bg_img.png');
 
 			h1 {
 				margin-top: 26px;
@@ -769,6 +775,7 @@ $className: o-hero;
 				figure {
 					width: 98vw;
 					margin: 0 0 242px;
+
 				}
 			}
 		}
@@ -860,6 +867,8 @@ $className: o-hero;
 				figure {
 					width: 98vw;
 					margin: 0 0 242px;
+					max-width: 1096px;
+
 				}
 			}
 		}

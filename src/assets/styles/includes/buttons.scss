@@ -61,6 +61,10 @@ BUTTONS & LINKS
 			cursor: pointer;
 		} 
 
+		&:visited{
+			color:$white;
+		} 
+
 
 // - - Features
 
@@ -75,9 +79,6 @@ BUTTONS & LINKS
 
 
 		
-
-
-
 		// Sizes
 		&.-small{
 			padding:12px 30px;
@@ -106,8 +107,6 @@ BUTTONS & LINKS
 		}
 
 
-
-	
 
 		// Disabled
 		&.-disabled, 
@@ -164,6 +163,10 @@ BUTTONS & LINKS
 			&:hover{
 				color: $black;
 				background:darken($white, 8%);
+			} 
+
+			&:visited{
+				color: $black;
 			} 
 
 		}
