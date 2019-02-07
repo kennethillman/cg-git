@@ -176,6 +176,11 @@ a.#{$className} {
 
 		&.-boxer{
 			background-image:url(/assets/images/casebild-boxer.jpg);
+			&.-icon {
+				svg {
+			    	width: 50%;
+				}
+			}
 		}
 
 		/* @2x Images (Pixel Ratio of 1.25+) */
