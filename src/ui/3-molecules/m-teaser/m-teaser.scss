@@ -174,6 +174,75 @@ a.#{$className} {
 
 	// - - BG
 
+		&.-boxer{
+			background-image:url(/assets/images/casebild-boxer.jpg);
+			&.-icon {
+				svg {
+			    	width: 50%;
+				}
+			}
+		}
+
+		/* @2x Images (Pixel Ratio of 1.25+) */
+		@media only screen and (-o-min-device-pixel-ratio: 5/4),
+		       only screen and (-webkit-min-device-pixel-ratio: 1.25),
+		       only screen and (min-device-pixel-ratio: 1.25),
+		       only screen and (min-resolution: 1.25dppx) {
+			&.-boxer{background-image:url(/assets/images/casebild-boxer@2x.jpg);}
+		}
+
+		/* @3x Images (Pixel Ratio of 2.25+) */
+		@media only screen and (-o-min-device-pixel-ratio: 9/4),
+		       only screen and (-webkit-min-device-pixel-ratio: 2.25),
+		       only screen and (min-device-pixel-ratio: 2.25),
+		       only screen and (min-resolution: 2.25dppx) {
+			&.-boxer{background-image:url(/assets/images/casebild-boxer@3x.jpg);}
+		}
+
+		&.-nokeducation{
+			background-image:url(/assets/images/casebild-nokedu.jpg);
+		}
+
+		/* @2x Images (Pixel Ratio of 1.25+) */
+		@media only screen and (-o-min-device-pixel-ratio: 5/4),
+		       only screen and (-webkit-min-device-pixel-ratio: 1.25),
+		       only screen and (min-device-pixel-ratio: 1.25),
+		       only screen and (min-resolution: 1.25dppx) {
+			&.-nokeducation{background-image:url(/assets/images/casebild-nokedu@2x.jpg);}
+		}
+
+		/* @3x Images (Pixel Ratio of 2.25+) */
+		@media only screen and (-o-min-device-pixel-ratio: 9/4),
+		       only screen and (-webkit-min-device-pixel-ratio: 2.25),
+		       only screen and (min-device-pixel-ratio: 2.25),
+		       only screen and (min-resolution: 2.25dppx) {
+			&.-nokeducation{background-image:url(/assets/images/casebild-nokedu@3x.jpg);}
+		}
+
+		&.-nokpublication{
+			background-image:url(/assets/images/casebild-nokpub.jpg);
+		}
+
+		/* @2x Images (Pixel Ratio of 1.25+) */
+		@media only screen and (-o-min-device-pixel-ratio: 5/4),
+		       only screen and (-webkit-min-device-pixel-ratio: 1.25),
+		       only screen and (min-device-pixel-ratio: 1.25),
+		       only screen and (min-resolution: 1.25dppx) {
+			&.-nokpublication{background-image:url(/assets/images/casebild-nokpub@2x.jpg);}
+		}
+
+		/* @3x Images (Pixel Ratio of 2.25+) */
+		@media only screen and (-o-min-device-pixel-ratio: 9/4),
+		       only screen and (-webkit-min-device-pixel-ratio: 2.25),
+		       only screen and (min-device-pixel-ratio: 2.25),
+		       only screen and (min-resolution: 2.25dppx) {
+			&.-nokpublication{background-image:url(/assets/images/casebild-nokpub@3x.jpg);}
+		}
+
+
+
+
+
 		&.-viasatsport {
 			background-image:url(/assets/images/casebild-viasport.jpg);
 		}
@@ -346,8 +415,8 @@ a.#{$className} {
 				margin: 0;
 				display: inline-block;
 				opacity: 0;
-				width:50%;
-				max-height: 3.5rem;
+				width:90%;
+				max-height: 10rem;
 				//@include transform(translateY(50px));
 				@include transition(all  .375s ease-out );
 				position: absolute;
@@ -359,7 +428,7 @@ a.#{$className} {
 			svg {
 				
 				fill: $white;
-				height: 3.5rem;
+				height: 10rem;
 				width: 100%;
 				
 			}
