@@ -105,8 +105,8 @@ h3 a {
 		text-align: center;
 		
 		.bg {
-			background: url(http://www.ljudochbild.se/wp-content/uploads/sf-kids-menu.png) 50%;
-			background-size: cover;
+			background-image: url('/assets/images/latest-bg-nok-edu.jpg');
+			background-size: contain;
 			background-attachment: fixed;
 			position: relative;
 		    width: 101%;
@@ -138,6 +138,7 @@ h3 a {
 			z-index: 1;
 			width: 100%; 
 			height: 101%;
+			line-height: .9;
 		}
 
 		.body {

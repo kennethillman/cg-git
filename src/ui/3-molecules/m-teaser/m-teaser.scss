@@ -19,7 +19,9 @@ a.#{$className} {
 
 	@include VP320 {
 
+
 		&:hover {
+
 			.body {
 				z-index: 1;
 				background: rgba(0,0,0,.55);
@@ -138,10 +140,15 @@ a.#{$className} {
 		}
 
 		.article-text-title {
-			font-size: 32px;
-			font-weight: 400;
+			font-family: 'apercuregular';
+			font-size: 24px;
+			font-weight: normal;
+			font-style: normal;
 			&--light {
 				color: #fff;
+			}
+			&--blue3 {
+				color: $blue3;
 			}
 			&::hover {
 				text-decoration: underline;
@@ -161,18 +168,57 @@ a.#{$className} {
 		}
 		
 		.article-label {
-			font-family: $font-a;
+			font-family: $font-b;
 			font-size: 1.2rem;
 			position: absolute;
 			bottom: 0;
-			right: 1rem;
-			text-decoration: underline;
+			left: 1rem;
+			//text-decoration: underline;
+
 			&--light {
 				color: #fff;
 			}
+			&--blue3 {
+				color: $blue3;
+			}
+			span {
+				display: block;
+				text-align: left;
+				text-decoration: underline;
+			}
 		}
 
+		
+
+
+	
 	// - - BG
+
+		&.-can-riga{
+			background-image:url(/assets/images/case-video-can.jpg);
+			&.-icon {
+				svg {
+			    	width: 50%;
+				}
+			}
+		}
+
+		/* @2x Images (Pixel Ratio of 1.25+) */
+		@media only screen and (-o-min-device-pixel-ratio: 5/4),
+		       only screen and (-webkit-min-device-pixel-ratio: 1.25),
+		       only screen and (min-device-pixel-ratio: 1.25),
+		       only screen and (min-resolution: 1.25dppx) {
+			&.-can-riga{background-image:url(/assets/images/case-video-can@2x.jpg);}
+		}
+
+		/* @3x Images (Pixel Ratio of 2.25+) */
+		@media only screen and (-o-min-device-pixel-ratio: 9/4),
+		       only screen and (-webkit-min-device-pixel-ratio: 2.25),
+		       only screen and (min-device-pixel-ratio: 2.25),
+		       only screen and (min-resolution: 2.25dppx) {
+			&.-can-riga{background-image:url(/assets/images/case-video-can@3x.jpg);}
+		}
+
 
 		&.-boxer{
 			background-image:url(/assets/images/casebild-boxer.jpg);
@@ -198,6 +244,8 @@ a.#{$className} {
 		       only screen and (min-resolution: 2.25dppx) {
 			&.-boxer{background-image:url(/assets/images/casebild-boxer@3x.jpg);}
 		}
+
+
 
 		&.-nokeducation{
 			background-image:url(/assets/images/casebild-nokedu.jpg);
