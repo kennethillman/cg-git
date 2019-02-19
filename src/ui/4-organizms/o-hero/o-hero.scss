@@ -54,8 +54,8 @@ $className: o-hero;
 
 		h1 {
 			font-size: 18px;
-			font-family: $font-b;
-			margin:0 0 20px;
+			font-family: $font-a;
+			margin:0 0 32px;
 			font-weight: normal;
 			display: block;
 		}
@@ -66,9 +66,9 @@ $className: o-hero;
 		}
 
 		p {
-			font-family: $font-a;
-			font-size: 30px;
-			line-height: 42px;
+			font-family: $font-b;
+			font-size: 20px;
+			line-height: 28px;
 		}
 
 		.body {
@@ -518,6 +518,11 @@ $className: o-hero;
 			max-width: 70%;
 		}	
 
+		h1 {
+		    font-size: 32px;
+		    line-height: 1;
+		}
+
 
 		&.-case {
 
@@ -645,7 +650,21 @@ $className: o-hero;
 		&.-nokeducation {
 
 			.cover-image {
-				width: 221px;
+		
+				height: 50vh;
+				width: 420px;
+				text-align: left;
+
+				img {
+					max-height: 100%;
+					width: auto;
+					z-index: 99;
+					position: absolute;
+					bottom: 0;
+					left: 0vw;
+
+				}
+				
 			}
 			
 		}
@@ -655,8 +674,6 @@ $className: o-hero;
 
 		&.-nokpublications {
 			background-size: 1024px;
-
-
 			h1 {
 				margin-top: 26px;
 				margin-bottom: 220px;
@@ -742,7 +759,7 @@ $className: o-hero;
 		&.-nokeducation {
 
 			.cover-image {
-				width: 252px;
+				width: auto;
 			}
 			
 		}
@@ -792,13 +809,13 @@ $className: o-hero;
 @include VP1280 {
 	
 		h1 {
-			font-size: 20px;
+			//font-size: 20px;
 		}
 
 		p {
-			font-family: $font-a;
-			font-size: 36px;
-			line-height: 48px;
+		
+			// font-size: 36px;
+			// line-height: 48px;
 		}
 
 		&.-case {
@@ -889,6 +906,23 @@ $className: o-hero;
 			background-position: center -6vw;
 		}
 
+		// NoK education
+
+	&.-nokeducation {
+		.cover-image {
+		
+	
+				width: 50vw;
+		
+
+				img {
+					height:38vh;
+					width: auto;
+				}
+				
+			}
+	}
+
 }
 
 ////////////////////////////////////////////////////////////////
@@ -917,13 +951,7 @@ $className: o-hero;
 
 	}
 
-	// NoK education
-
-	&.-nokeducation {
-		.cover-image {
-			width: 482px;
-		}
-	}
+	
 
 	&.-nokpublications {
 		background-position: center -12vw;
