@@ -243,6 +243,14 @@ $className: o-hero;
 			background-position: center -1px;
 			margin-bottom: 50px;
 
+			.text-wrapper {
+				h1,
+				p {
+					position: relative;
+					z-index: 200;
+				}
+			}
+			
 			.cover-image {
 				position: absolute;
 				left: 0px;
@@ -908,20 +916,6 @@ $className: o-hero;
 
 		// NoK education
 
-	&.-nokeducation {
-		.cover-image {
-		
-	
-				width: 50vw;
-		
-
-				img {
-					height:38vh;
-					width: auto;
-				}
-				
-			}
-	}
 
 }
 
